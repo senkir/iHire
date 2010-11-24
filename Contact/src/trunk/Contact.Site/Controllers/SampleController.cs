@@ -75,7 +75,7 @@ namespace Contact.Site.Controllers
             try {
 
                 // If the model is not valid then do not continue and display the model again.
-                if (this.ModelState.IsValid) {
+                if (!this.ModelState.IsValid) {
                     return this.View("Details", model);
                 }
 

@@ -8,6 +8,7 @@
 </head>
 <body>
     <div>
+        <%=this.Html.ActionLink("Create New", "Details") %>
         <table>
             <tr>
                 <th>Id</th>
@@ -16,13 +17,30 @@
             </tr>
             <%
                 foreach (var sample in this.Model) {
+                    
+                    // controller
+                                // action
+                                // id
+                                // http://localhost/Controller/Action/Id
+                                // http://localhost/Sample/
+                                // http://localhost/Sample/Index/
+                    // http://localhost/Sample/Index/?var=test&foo=bar
             %>
             <tr>
                 <td>
                     <%= this.Html.ActionLink(
                             this.Html.Encode(sample.Id),
                             "Details",
-                            new { id = sample.Id }
+                            new
+                            {
+                                id = sample.Id
+                            },
+                            new
+                            {
+                                target = "_new",
+                                style = "font-weight: bold:",
+                                @class = "my_link"
+                            }
                         )
                     %>
                 </td>

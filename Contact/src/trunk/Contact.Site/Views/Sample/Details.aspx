@@ -9,6 +9,9 @@
 <body>
     <div>
         <% using (this.Html.BeginForm("Save", "Sample")) { %>
+
+        <%=this.Html.ValidationSummary() %>
+
         <%=this.Html.Hidden("state", this.ViewData["EntityState"]) %>
         <%=this.Html.HiddenFor(model => model.Id) %>
         <table>

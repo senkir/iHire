@@ -83,6 +83,12 @@ namespace Contact.Service {
             }
         }
 
+        //public void CreateSample(Sample sample) { }
+
+        //public void DeleteSample(int id) { }
+
+        //public void UpdateSample(Sample sample) { }
+
         /// <summary>
         /// Sets a sample to the database.
         /// </summary>
@@ -100,7 +106,11 @@ namespace Contact.Service {
 
                     // Validate that there are no conflicts within the database.
                     var existing = context.Samples
-                        .FirstOrDefault(s => s.String == sample.String && s.Integer == sample.Integer);
+                        .FirstOrDefault
+                        (
+                        s => s.String == sample.String &&
+                        s.Integer == sample.Integer
+                        );
 
                     if (null != existing) {
                         validations.Add(
