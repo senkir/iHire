@@ -6,26 +6,8 @@
     <edmx:StorageModels>
     <Schema Namespace="Model1.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="Model1StoreContainer">
-          <EntitySet Name="Contact" EntityType="Model1.Store.Contact" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Sample" EntityType="Model1.Store.Sample" store:Type="Tables" Schema="dbo" />
         </EntityContainer>
-        <EntityType Name="Contact">
-          <Key>
-            <PropertyRef Name="ContactID" />
-          </Key>
-          <Property Name="ContactID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
-          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
-          <Property Name="Nickname" Type="nvarchar" MaxLength="50" />
-          <Property Name="Address" Type="nvarchar" MaxLength="50" />
-          <Property Name="City" Type="nvarchar" MaxLength="50" />
-          <Property Name="State" Type="nvarchar" MaxLength="2" />
-          <Property Name="Zip" Type="nvarchar" MaxLength="50" />
-          <Property Name="HomePhone" Type="nvarchar" MaxLength="50" />
-          <Property Name="CellPhone" Type="nvarchar" MaxLength="50" />
-          <Property Name="WorkPhone" Type="nvarchar" MaxLength="50" />
-          <Property Name="Email" Type="nvarchar" MaxLength="50" />
-        </EntityType>
         <EntityType Name="Sample">
           <Key>
             <PropertyRef Name="Id" />
@@ -40,7 +22,6 @@
       <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
         <EntityContainer Name="ContactContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Samples" EntityType="Model1.Sample" />
-          <EntitySet Name="Contacts" EntityType="Model1.Contact" />
         </EntityContainer>
         <EntityType Name="Sample">
           <Key>
@@ -49,23 +30,6 @@
           <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="String" Name="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="Int32" Name="Integer" />
-        </EntityType>
-        <EntityType Name="Contact">
-          <Key>
-            <PropertyRef Name="ContactID" />
-          </Key>
-          <Property Type="Int32" Name="ContactID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="FirstName" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="LastName" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Nickname" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Address" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="City" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="State" MaxLength="2" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Zip" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="HomePhone" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="CellPhone" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="WorkPhone" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -81,24 +45,6 @@
                 <ScalarProperty Name="Integer" ColumnName="Integer" />
                 <ScalarProperty Name="String" ColumnName="String" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Contacts">
-            <EntityTypeMapping TypeName="Model1.Contact">
-              <MappingFragment StoreEntitySet="Contact">
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="WorkPhone" ColumnName="WorkPhone" />
-                <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
-                <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
-                <ScalarProperty Name="Zip" ColumnName="Zip" />
-                <ScalarProperty Name="State" ColumnName="State" />
-                <ScalarProperty Name="City" ColumnName="City" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="Nickname" ColumnName="Nickname" />
-                <ScalarProperty Name="LastName" ColumnName="LastName" />
-                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-                <ScalarProperty Name="ContactID" ColumnName="ContactID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -124,7 +70,6 @@
     <edmx:Diagrams>
       <Diagram Name="Model1" >
         <EntityTypeShape EntityType="Model1.Sample" Width="1.5" PointX="0.75" PointY="0.75" Height="1.59568359375" />
-        <EntityTypeShape EntityType="Model1.Contact" Width="1.5" PointX="2.875" PointY="0.5" Height="3.3263964843749996" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
