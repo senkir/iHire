@@ -20,6 +20,12 @@ namespace Contact.Service {
         [OperationContract]
         Response<Sample> GetSample(Request<int> request);
 
+        ///<summary>
+        /// Get contact information from the database by index.
+        ///</summary>
+        [OperationContract]
+        Response<DataAccess.Contact> GetContact(Request<int> request);
+
         /// <summary>
         /// Gets all samples from the database.
         /// </summary>

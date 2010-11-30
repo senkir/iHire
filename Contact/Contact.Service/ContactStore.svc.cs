@@ -15,6 +15,52 @@ namespace Contact.Service {
     public class ContactStore : ServiceBase, IContactStore {
 
         /// <summary>
+        /// Retrieve a single record from the Contact Table
+        /// </summary>
+        /// 
+        public Response<DataAccess.Contact> GetContact(Request<int> request) {
+
+            try {
+                // Connect to the database context.
+                using (ContactContext context = this.GetDatabaseContext()) {
+
+                    // Find the sample record in the database by Id.
+                    DataAccess.Contact contact = context.Contacts
+                        .FirstOrDefault(s => s.ContactID == request.Value);
+
+                    ValidationMessageCollection validations = null;
+
+                    // If there is no contact found create a validation message.
+                    if (contact == null) {
+
+                        validations = new ValidationMessageCollection();
+                        validations.Add(
+                            new ValidationMessage {
+                                ModelName = "request",
+                                Type = ValidationType.SystemError,
+                                Message = string.Format(
+                                    "Unable to find Sample with Id: {0}",
+                                    request.Value
+                                )
+                            }
+                        );
+
+                    }
+
+                    // Return the contact/validation message.
+                    return this.GetResponse<DataAccess.Contact>(  //return the response object
+                        contact,
+                        validations
+                    );
+                }
+            }
+            catch (Exception ex) {
+                return this.HandleException<DataAccess.Contact>(ex);
+            }
+        }
+
+
+        /// <summary>
         /// Gets a sample record from the database by index.
         /// </summary>
         public Response<Sample> GetSample(Request<int> request) {

@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ContactControllerBase.cs" />
+    <Compile Include="Controllers\DetailController.cs" />
     <Compile Include="Controllers\SampleController.cs" />
     <Compile Include="Extenders\HtmlHelperExtender.cs" />
     <Compile Include="Global.asax.cs">
@@ -80,6 +81,7 @@
       <DependentUpon>Data.mdf</DependentUpon>
     </Content>
     <Content Include="Global.asax" />
+    <Content Include="Views\Detail\Index.aspx" />
     <Content Include="Views\Sample\Details.aspx" />
     <Content Include="Views\Sample\Index.aspx" />
     <Content Include="Web.config" />
