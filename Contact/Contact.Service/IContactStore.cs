@@ -37,5 +37,8 @@ namespace Contact.Service {
         /// </summary>
         [OperationContract]
         Response<NoValue> SetSample(Request<ModelCriteria<Sample>> request);
+
+        [OperationContract]
+        Response<NoValue> DeleteContact(Request<int> request);
     }
 }

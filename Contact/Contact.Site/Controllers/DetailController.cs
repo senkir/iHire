@@ -50,16 +50,18 @@ namespace Contact.Site.Controllers
         /// <returns>
         /// 
         /// </returns>
-        public void DeleteContact(int id)
+        public ActionResult DeleteContact(int id)
         {
             //formulate a request for the contact
             var contactRequest = new Request<int>
             {
                 Value = id
             };
-            //Verify that the contact info exists
 
             //Delete the contact info
+            this.ContactStore.DeleteContact(contactRequest);
+
+            return this.RedirectToAction("Index");
         }
     }
 

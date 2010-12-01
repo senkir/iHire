@@ -215,5 +215,57 @@ namespace Contact.Service {
             }
         }
 
+
+        /// <summary>
+        /// Delete A Contact
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        public Response<NoValue> DeleteContact(Request<int> request)
+        {
+            try
+            {
+                int id = request.Value;
+                if (id == null)
+                {
+                    throw new ArgumentNullException("id.Value");
+                }
+
+                // Connect to the database context.
+                using (ContactContext context = this.GetDatabaseContext())
+                {
+
+                    var query = context.Contacts.FirstOrDefault(contact => contact.ContactID == id);
+
+                    context.Contacts.DeleteObject(query);
+                    ValidationMessageCollection validations = new ValidationMessageCollection();
+
+                        // Perform the update to the database.
+                        // There should only ever be one record changed in the database.
+                        if (1 != context.SaveChanges())
+                        {
+                            validations.Add(
+                                new ValidationMessage
+                                {
+                                    ModelName = "request",
+                                    Type = ValidationType.SystemError,
+                                    Message = "Contact failed to delete from database"
+                                }
+                            );
+                        }
+                    
+
+                    return this.GetResponse<NoValue>(
+                        validations:
+                            validations
+                    );
+
+                }
+            }
+            catch (Exception ex)
+            {
+                return this.HandleException<NoValue>(ex);
+            }
+        }
     }
 }

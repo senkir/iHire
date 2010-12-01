@@ -36,7 +36,9 @@
     </table>
     </div>
         <div>
-    <%=Html.ActionLink("Delete", "DeleteContact", Model.ContactID )%>
+    <%=Html.ActionLink("Delete", "DeleteContact",
+        new { id = Model.ContactID }
+            )%>
         </div>
 </body>
 </html>
