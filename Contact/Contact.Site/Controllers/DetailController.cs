@@ -41,6 +41,26 @@ namespace Contact.Site.Controllers
                 return this.HandleException(ex);
             }
         }
+        /// <summary>
+        /// Action Method to delete a contact
+        /// </summary>
+        /// <param name="id">
+        /// ContactID to be deleted
+        /// </param>
+        /// <returns>
+        /// 
+        /// </returns>
+        public void DeleteContact(int id)
+        {
+            //formulate a request for the contact
+            var contactRequest = new Request<int>
+            {
+                Value = id
+            };
+            //Verify that the contact info exists
+
+            //Delete the contact info
+        }
     }
 
 }

@@ -22,18 +22,21 @@
             <td>Work Phone</td>
         </tr>
         <tr>
-        <td> <%=Html.EditorFor(model => model.LastName) %></td>
-        <td> <%=Html.EditorFor(model => model.FirstName) %></td>
-        <td> <%=Html.EditorFor(model => model.Nickname) %></td>
-        <td> <%=Html.EditorFor(model => model.Address)%></td>
-        <td> <%=Html.EditorFor(model => model.City)%></td>
-        <td> <%=Html.EditorFor(model => model.State)%></td>
-        <td> <%=Html.EditorFor(model => model.Zip)%></td>
-        <td> <%=Html.EditorFor(model => model.HomePhone)%></td>
-        <td> <%=Html.EditorFor(model => model.CellPhone)%></td>
-        <td> <%=Html.EditorFor(model => model.WorkPhone)%></td>
+        <td> <%=Model.LastName %></td>
+        <td> <%=Model.FirstName %></td>
+        <td> <%=Model.Nickname %></td>
+        <td> <%=Model.Address%></td>
+        <td> <%=Model.City%></td>
+        <td> <%=Model.State%></td>
+        <td> <%=Model.Zip%></td>
+        <td> <%=Model.HomePhone%></td>
+        <td> <%=Model.CellPhone%></td>
+        <td> <%=Model.WorkPhone%></td>
         </tr>
     </table>
     </div>
+        <div>
+    <%=Html.ActionLink("Delete", "DeleteContact", Model.ContactID )%>
+        </div>
 </body>
 </html>
