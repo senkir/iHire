@@ -267,5 +267,39 @@ namespace Contact.Service {
                 return this.HandleException<NoValue>(ex);
             }
         }
+
+        public Response<NoValue> CreateContact(Request<DataAccess.Contact> request) {
+            try {
+                using (ContactContext context = this.GetDatabaseContext()) {
+                    // Attach the record to the context and update the state to be based upon the request.
+                    context.Contacts.Attach(request.Value);
+                    context.ObjectStateManager.ChangeObjectState(request.Value, EntityState.Added);
+
+                    context.SaveChanges();
+                    return this.GetResponse<NoValue>();
+                }
+            }
+
+            catch (Exception ex) {
+                return this.HandleException<NoValue>(ex);
+            }
+        }
+
+        public Response<ContactCollection> GetContacts(Request<NoValue> request) {
+            try {
+                using (ContactContext context = this.GetDatabaseContext()) {
+                    var query = context.Contacts.Select(contact => contact);
+
+                    ContactCollection collection = new ContactCollection(query.ToArray());
+
+                    return this.GetResponse<ContactCollection>(collection);
+                }
+            }
+
+            catch (Exception ex) {
+                return this.HandleException<ContactCollection>(ex);
+            }
+
+        }
     }
 }

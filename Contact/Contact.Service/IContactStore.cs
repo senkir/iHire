@@ -40,5 +40,17 @@ namespace Contact.Service {
 
         [OperationContract]
         Response<NoValue> DeleteContact(Request<int> request);
+
+        /// <summary>
+        /// Creates contact information to the database.
+        /// </summary>
+        [OperationContract]
+        Response<NoValue> CreateContact(Request<DataAccess.Contact> request);
+
+        /// <summary>
+        /// Gets all contacts from the database.
+        /// </summary>
+        [OperationContract]
+        Response<ContactCollection> GetContacts(Request<NoValue> request);
     }
 }
