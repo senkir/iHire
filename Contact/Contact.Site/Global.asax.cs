@@ -16,7 +16,7 @@ namespace Contact.Site {
             routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "Sample", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+                new { controller = "Contact", action = "Index", id = UrlParameter.Optional } // Parameter defaults
             );
 
         }

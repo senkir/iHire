@@ -68,7 +68,6 @@
   <ItemGroup>
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\ContactControllerBase.cs" />
-    <Compile Include="Controllers\DetailController.cs" />
     <Compile Include="Controllers\SampleController.cs" />
     <Compile Include="Extenders\HtmlHelperExtender.cs" />
     <Compile Include="Global.asax.cs">
@@ -84,7 +83,6 @@
     <Content Include="Global.asax" />
     <Content Include="Views\Contact\create.aspx" />
     <Content Include="Views\Contact\Index.aspx" />
-    <Content Include="Views\Detail\Index.aspx" />
     <Content Include="Views\Sample\Details.aspx" />
     <Content Include="Views\Sample\Index.aspx" />
     <Content Include="Web.config" />

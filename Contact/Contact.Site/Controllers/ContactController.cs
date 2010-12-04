@@ -31,5 +31,18 @@ namespace Contact.Site.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Delete(int id) {
+
+            //formulate a request for the contact
+            var contactRequest = new Request<int> {
+                Value = id
+            };
+
+            //Delete the contact info
+            this.ContactStore.DeleteContact(contactRequest);
+
+            return this.RedirectToAction("Index");
+        }
+
     }
 }

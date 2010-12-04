@@ -11,6 +11,7 @@
         <%=this.Html.ActionLink("Create New", "Create") %>
         <table border="1">
             <tr>
+                <th>Delete</th>
                 <th>Contact ID</th>
                 <th>First Name</th>
                 <th>Last Name</th>
@@ -30,6 +31,9 @@
                 
             %>
             <tr>
+                <td>
+                    <%=this.Html.ActionLink("X", "Delete", new { id = contact.ContactID }) %>
+                </td>
                 <td><%=contact.ContactID %></td>
                 <td><%=contact.FirstName %></td>
                 <td><%=contact.LastName %></td>
