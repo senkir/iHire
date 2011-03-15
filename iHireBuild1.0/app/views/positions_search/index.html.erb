@@ -1,0 +1,18 @@
+
+  <p>query stuff should go here as a form, but for now....</p>
+  <div id="locationsColumn">
+Locations<br/>
+  <select name="locations">
+  <%= options_for_select @locations %>
+</select>
+</div>
+<div id="departmentsColumn">
+Departments<br/>
+    <select name="departments">
+    <%= options_for_select @departments %>
+  </select>     
+</div>
+<div id="results">
+<p>no search entered yet.</p>
+</div>
+  <p><%= link_to "All Open Positions", positions_search_results_path %></p>

@@ -1,0 +1,27 @@
+<div id="results">
+here's a form<br/>
+
+<%= form_for(:position) do |form| %>
+<h2>POSITION</h2
+<p>
+<%= form.label "name" %>
+<%= form.text_field :title, :placeholder => @p.title %>
+</p>
+<p>
+<%= form.label "description" %>
+<%= form.text_area :description, :rows => 3, :placeholder => @p.description%>
+</p>
+<%= form.label "location" %>
+<%= form.text_field :location, :placeholder => @p.location %>
+<p>
+<%= form.label "Open: " %>
+<%= form.label "yes" %>
+<%= form.radio_button :is_open, 1 %>
+<%= form.label "no" %>
+<%= form.radio_button :is_open, 0 %>
+</p>
+<p>
+<%= form.submit "Save Changes"%>
+</p>
+<% end %>
+</div>
