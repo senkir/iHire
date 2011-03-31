@@ -5,7 +5,6 @@
     <%= search_form.input :title %>
     <%= search_form.input :location, :collection => Position.find(:all, :select => "DISTINCT(location)").map(&:location) %>
     <%= search_form.input :department, :collection => Position.find(:all, :select => "DISTINCT(department)").map(&:department) %>
-    <%= search_form.input :is_open, :as => :hidden %>
 <% end %>
   <%= search_form.buttons :commit %>  
 <% end %>

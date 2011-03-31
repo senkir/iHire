@@ -1,18 +1,8 @@
 class PositionsSearchController < ApplicationController
   def index
-    @title = "Open Position Search Controller"
+    @page_title = "Open Position Search Controller"
+    #if a search has occured, save it as a local variable
     @query = params[:position]
-  end
-
-  def results
-    @positions = Position.all
-    
-  end
-
-  def detail
-  end
-
-  def search
   end
 end
 

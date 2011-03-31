@@ -1,31 +1,25 @@
 module PositionsSearchHelper
   
   def results_for_query(query)
-    if query[:location]
-      @location = query[:location]
-    else
-      @location = "%"
-    end
-    if query[:department]
-      @department = query[:department]
-    else
-      @department = "%"
-    end
-    @where = 'location like \'' + @location + '\' and department like \'' + @department + '\''
-    Position.where( @where )
+    Position.where( query_for_search query )
   end
   
   def query_for_search(query)
-        if query[:location]
+    if query[:location] != ''
       @location = query[:location]
     else
-      @location = "\%"
+      @location = '%'
     end
-    if query[:department]
+    if query[:department] != ''
       @department = query[:department]
     else
-      @department = "\%"
+      @department = '%'
     end
-    'location like \'' + @location + '\' and department like \'' + @department + '\''
+    if query[:title] != ''
+      @title = query[:title]
+    else
+      @title = '%'
+    end    
+    'title like \'%' + @title + '%\' and location like \'' + @location + '\'' + ' and department like \'' + @department + '\' and is_open = 1'
   end
 end

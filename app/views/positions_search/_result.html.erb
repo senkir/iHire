@@ -1,0 +1,8 @@
+<%= image_tag("accomodationIconMarker.png") %>
+<b><%= position.title %> - <%= position.updated_on %></b>
+<ul>
+  <li><%=raw position.description %></li>
+   <li><%= position.location %></li>
+   <li><%= position.department %></li>
+   <%= link_to "Apply", job_questions_index_path %>
+</ul>
