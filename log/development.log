@@ -21762,3 +21762,58 @@ Rendered positions_search/_search_form.html.erb (55.7ms)
 Rendered positions_search/_result.html.erb (1.3ms)
 Rendered positions_search/index.html.erb within layouts/application (63.8ms)
 Completed 200 OK in 70ms (Views: 43.9ms | ActiveRecord: 26.1ms)
+
+
+Started POST "/positions_search/index" for 127.0.0.1 at 2011-03-31 00:34:04 -0700
+  Processing by PositionsSearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eZyYtB1OHjfEHESbp1thrM88/1zjabr45AncV6fonbk=", "position"=>{"title"=>"ham", "location"=>"", "department"=>""}, "commit"=>"Submit"}
+  [1m[35mPosition Load (185.8ms)[0m  SELECT DISTINCT(location) FROM `positions` ORDER BY updated_on
+  [1m[36mPosition Load (2.1ms)[0m  [1mSELECT DISTINCT(department) FROM `positions` ORDER BY updated_on[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb__1034164432972521422_2174576260__1144019153855570908 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb__1034164432972521422_2174576260__1144019153855570908 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (221.0ms)
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `positions` WHERE (title like '%ham%' and location like '%' and department like '%' and is_open = 1)
+Rendered positions_search/index.html.erb within layouts/application (225.8ms)
+Completed 200 OK in 233ms (Views: 44.1ms | ActiveRecord: 188.2ms)
+
+
+Started POST "/positions_search/index" for 127.0.0.1 at 2011-03-31 00:34:12 -0700
+  Processing by PositionsSearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eZyYtB1OHjfEHESbp1thrM88/1zjabr45AncV6fonbk=", "position"=>{"title"=>"thingo", "location"=>"", "department"=>""}, "commit"=>"Submit"}
+  [1m[36mPosition Load (2.2ms)[0m  [1mSELECT DISTINCT(location) FROM `positions` ORDER BY updated_on[0m
+  [1m[35mPosition Load (1.7ms)[0m  SELECT DISTINCT(department) FROM `positions` ORDER BY updated_on
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb__1034164432972521422_2156631560__1144019153855570908 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb__1034164432972521422_2156631560__1144019153855570908 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (35.6ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `positions` WHERE (title like '%thingo%' and location like '%' and department like '%' and is_open = 1)[0m
+Rendered positions_search/index.html.erb within layouts/application (73.3ms)
+Completed 200 OK in 80ms (Views: 75.2ms | ActiveRecord: 4.3ms)
+
+
+Started POST "/positions_search/index" for 127.0.0.1 at 2011-03-31 00:34:18 -0700
+  Processing by PositionsSearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eZyYtB1OHjfEHESbp1thrM88/1zjabr45AncV6fonbk=", "position"=>{"title"=>"pig", "location"=>"", "department"=>""}, "commit"=>"Submit"}
+  [1m[35mPosition Load (2.3ms)[0m  SELECT DISTINCT(location) FROM `positions` ORDER BY updated_on
+  [1m[36mPosition Load (2.7ms)[0m  [1mSELECT DISTINCT(department) FROM `positions` ORDER BY updated_on[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb__1034164432972521422_2173654440__1144019153855570908 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb__1034164432972521422_2173654440__1144019153855570908 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (36.4ms)
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `positions` WHERE (title like '%pig%' and location like '%' and department like '%' and is_open = 1)
+Rendered positions_search/index.html.erb within layouts/application (41.2ms)
+Completed 200 OK in 48ms (Views: 42.3ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/positions_search/index" for 127.0.0.1 at 2011-03-31 00:34:24 -0700
+  Processing by PositionsSearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eZyYtB1OHjfEHESbp1thrM88/1zjabr45AncV6fonbk=", "position"=>{"title"=>"wr", "location"=>"", "department"=>""}, "commit"=>"Submit"}
+  [1m[36mPosition Load (2.2ms)[0m  [1mSELECT DISTINCT(location) FROM `positions` ORDER BY updated_on[0m
+  [1m[35mPosition Load (7.5ms)[0m  SELECT DISTINCT(department) FROM `positions` ORDER BY updated_on
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb__1034164432972521422_2154477200__1144019153855570908 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb__1034164432972521422_2154477200__1144019153855570908 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (75.9ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `positions` WHERE (title like '%wr%' and location like '%' and department like '%' and is_open = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `positions` WHERE (title like '%wr%' and location like '%' and department like '%' and is_open = 1)
+  [1m[36mPosition Load (0.3ms)[0m  [1mSELECT `positions`.* FROM `positions` WHERE (title like '%wr%' and location like '%' and department like '%' and is_open = 1) ORDER BY updated_on[0m
+Rendered positions_search/_result.html.erb (1.3ms)
+Rendered positions_search/index.html.erb within layouts/application (85.0ms)
+Completed 200 OK in 92ms (Views: 80.8ms | ActiveRecord: 10.4ms)
