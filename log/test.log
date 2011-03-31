@@ -1,0 +1,270 @@
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mGeneralQuestion Load (0.3ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions` WHERE `general_questions`.`id` = 980190962 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `general_questions`
+  Processing by GeneralQuestionsController#create as HTML
+  Parameters: {"general_question"=>{"created_at"=>2011-03-16 00:49:33 UTC, "id"=>980190962, "question"=>"MyString", "updated_at"=>2011-03-16 00:49:33 UTC}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.1ms)[0m  describe `general_questions`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `general_questions` (`question`, `created_at`, `updated_at`) VALUES ('MyString', '2011-03-16 00:49:33', '2011-03-16 00:49:33')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/general_questions/980190963
+Completed 302 Found in 66ms
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `general_questions`[0m
+  [1m[35mSQL (11.8ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mGeneralQuestion Load (0.3ms)[0m  SELECT `general_questions`.* FROM `general_questions` WHERE `general_questions`.`id` = 980190962 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM `general_questions`[0m
+  Processing by GeneralQuestionsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mGeneralQuestion Load (0.3ms)[0m  SELECT `general_questions`.* FROM `general_questions` WHERE `general_questions`.`id` = 980190962 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAREL (0.3ms)[0m  DELETE FROM `general_questions` WHERE `general_questions`.`id` = 980190962
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/general_questions
+Completed 302 Found in 3ms
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `general_questions`
+  [1m[36mSQL (7.6ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mGeneralQuestion Load (0.2ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions` WHERE `general_questions`.`id` = 980190962 LIMIT 1[0m
+  Processing by GeneralQuestionsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mGeneralQuestion Load (0.3ms)[0m  SELECT `general_questions`.* FROM `general_questions` WHERE `general_questions`.`id` = 980190962 LIMIT 1
+Rendered general_questions/_form.html.erb (5.5ms)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 29.2ms)
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mGeneralQuestion Load (0.3ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions` WHERE `general_questions`.`id` = 980190962 LIMIT 1[0m
+  Processing by GeneralQuestionsController#index as HTML
+  [1m[35mGeneralQuestion Load (0.3ms)[0m  SELECT `general_questions`.* FROM `general_questions`
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.8ms)
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mGeneralQuestion Load (0.3ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions` WHERE `general_questions`.`id` = 980190962 LIMIT 1[0m
+  Processing by GeneralQuestionsController#new as HTML
+Rendered general_questions/_form.html.erb (1.7ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.5ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mGeneralQuestion Load (0.3ms)[0m  SELECT `general_questions`.* FROM `general_questions` WHERE `general_questions`.`id` = 980190962 LIMIT 1
+  Processing by GeneralQuestionsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mGeneralQuestion Load (0.3ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions` WHERE `general_questions`.`id` = 980190962 LIMIT 1[0m
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.8ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mGeneralQuestion Load (0.3ms)[0m  SELECT `general_questions`.* FROM `general_questions` WHERE `general_questions`.`id` = 980190962 LIMIT 1
+  Processing by GeneralQuestionsController#update as HTML
+  Parameters: {"general_question"=>{"created_at"=>2011-03-16 00:49:33 UTC, "id"=>980190962, "question"=>"MyString", "updated_at"=>2011-03-16 00:49:33 UTC}, "id"=>"980190962"}
+  [1m[36mGeneralQuestion Load (0.3ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions` WHERE `general_questions`.`id` = 980190962 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/general_questions/980190962
+Completed 302 Found in 3ms
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  Processing by JobQuestionsController#index as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT `questions`.* FROM `questions` WHERE `questions`.`id` = 1 LIMIT 1
+Completed   in 4ms
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by JobQuestionsController#results as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT `questions`.* FROM `questions` WHERE `questions`.`id` = 1 LIMIT 1[0m
+Completed   in 1ms
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  Processing by PositionsSearchController#detail as HTML
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 2.7ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  Processing by PositionsSearchController#index as HTML
+  [1m[35mPosition Load (2.0ms)[0m  SELECT DISTINCT(location) FROM `positions` ORDER BY updated_on
+  [1m[36mPosition Load (7.0ms)[0m  [1mSELECT DISTINCT(department) FROM `positions` ORDER BY updated_on[0m
+Completed 200 OK in 51ms (Views: 35.7ms | ActiveRecord: 9.2ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  Processing by PositionsSearchController#results as HTML
+  [1m[35mPosition Load (0.4ms)[0m  SELECT `positions`.* FROM `positions` ORDER BY updated_on
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.7ms)
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by QuestionsAdminController#edit as HTML
+Completed   in 1ms
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by QuestionsAdminController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT `questions`.* FROM `questions`[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT `questions`.* FROM `questions` WHERE `questions`.`id` = 1 LIMIT 1
+Completed   in 2ms
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by QuestionsAdminController#new as HTML
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 1.1ms)
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by QuestionsAdminController#show as HTML
+Completed   in 1ms
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (29.8ms)[0m  SHOW TABLES
+  [1m[36mGeneralQuestion Load (0.4ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions` WHERE `general_questions`.`id` = 980190962 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) FROM `general_questions`
+  Processing by GeneralQuestionsController#create as HTML
+  Parameters: {"general_question"=>{"created_at"=>2011-03-16 00:49:50 UTC, "id"=>980190962, "question"=>"MyString", "updated_at"=>2011-03-16 00:49:50 UTC}}
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mSQL (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.2ms)[0m  describe `general_questions`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `general_questions` (`question`, `created_at`, `updated_at`) VALUES ('MyString', '2011-03-16 00:49:50', '2011-03-16 00:49:50')[0m
+  [1m[35mSQL (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/general_questions/980190963
+Completed 302 Found in 13ms
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM `general_questions`[0m
+  [1m[35mSQL (0.6ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mGeneralQuestion Load (0.3ms)[0m  SELECT `general_questions`.* FROM `general_questions` WHERE `general_questions`.`id` = 980190962 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM `general_questions`[0m
+  Processing by GeneralQuestionsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mGeneralQuestion Load (0.3ms)[0m  SELECT `general_questions`.* FROM `general_questions` WHERE `general_questions`.`id` = 980190962 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mAREL (0.2ms)[0m  DELETE FROM `general_questions` WHERE `general_questions`.`id` = 980190962
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/general_questions
+Completed 302 Found in 2ms
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM `general_questions`
+  [1m[36mSQL (9.5ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mGeneralQuestion Load (0.4ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions` WHERE `general_questions`.`id` = 980190962 LIMIT 1[0m
+  Processing by GeneralQuestionsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mGeneralQuestion Load (0.3ms)[0m  SELECT `general_questions`.* FROM `general_questions` WHERE `general_questions`.`id` = 980190962 LIMIT 1
+Rendered general_questions/_form.html.erb (5.1ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 50.5ms)
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mGeneralQuestion Load (0.3ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions` WHERE `general_questions`.`id` = 980190962 LIMIT 1[0m
+  Processing by GeneralQuestionsController#index as HTML
+  [1m[35mGeneralQuestion Load (0.2ms)[0m  SELECT `general_questions`.* FROM `general_questions`
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.8ms)
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mGeneralQuestion Load (0.2ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions` WHERE `general_questions`.`id` = 980190962 LIMIT 1[0m
+  Processing by GeneralQuestionsController#new as HTML
+Rendered general_questions/_form.html.erb (1.8ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.5ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mGeneralQuestion Load (0.3ms)[0m  SELECT `general_questions`.* FROM `general_questions` WHERE `general_questions`.`id` = 980190962 LIMIT 1
+  Processing by GeneralQuestionsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mGeneralQuestion Load (0.2ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions` WHERE `general_questions`.`id` = 980190962 LIMIT 1[0m
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.8ms)
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mGeneralQuestion Load (0.3ms)[0m  SELECT `general_questions`.* FROM `general_questions` WHERE `general_questions`.`id` = 980190962 LIMIT 1
+  Processing by GeneralQuestionsController#update as HTML
+  Parameters: {"general_question"=>{"created_at"=>2011-03-16 00:49:50 UTC, "id"=>980190962, "question"=>"MyString", "updated_at"=>2011-03-16 00:49:50 UTC}, "id"=>"980190962"}
+  [1m[36mGeneralQuestion Load (0.3ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions` WHERE `general_questions`.`id` = 980190962 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SAVEPOINT active_record_1
+WARNING: Can't mass-assign protected attributes: id
+  [1m[36mSQL (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/general_questions/980190962
+Completed 302 Found in 3ms
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  Processing by JobQuestionsController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT `questions`.* FROM `questions` WHERE `questions`.`id` = 1 LIMIT 1
+Completed   in 4ms
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by JobQuestionsController#results as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT `questions`.* FROM `questions` WHERE `questions`.`id` = 1 LIMIT 1[0m
+Completed   in 1ms
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  Processing by PositionsSearchController#detail as HTML
+Completed 200 OK in 5ms (Views: 5.0ms | ActiveRecord: 2.8ms)
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  Processing by PositionsSearchController#index as HTML
+  [1m[35mPosition Load (2.0ms)[0m  SELECT DISTINCT(location) FROM `positions` ORDER BY updated_on
+  [1m[36mPosition Load (2.1ms)[0m  [1mSELECT DISTINCT(department) FROM `positions` ORDER BY updated_on[0m
+Completed 200 OK in 47ms (Views: 36.1ms | ActiveRecord: 4.3ms)
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  Processing by PositionsSearchController#results as HTML
+  [1m[35mPosition Load (0.4ms)[0m  SELECT `positions`.* FROM `positions` ORDER BY updated_on
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.7ms)
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by QuestionsAdminController#edit as HTML
+Completed   in 1ms
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by QuestionsAdminController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT `questions`.* FROM `questions`[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT `questions`.* FROM `questions` WHERE `questions`.`id` = 1 LIMIT 1
+Completed   in 2ms
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by QuestionsAdminController#new as HTML
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 1.1ms)
+  [1m[36mSQL (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  Processing by QuestionsAdminController#show as HTML
+Completed   in 1ms
+  [1m[36mSQL (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK

@@ -1,0 +1,18 @@
+
+<div id="searchBar">
+<%= form_tag  do %>
+  <%= label_tag("locations")%>
+<%= options_for_select @locations %>
+<%= label_tag("departments")%>
+  <%= options_for_select @departments %>
+<%= label_tag %>
+<% end %>
+</div>
+<div id="results">
+<% if @query %>
+<p>search entered!  now to do stuff.</p>
+<% else %>
+<p>no search entered yet.</p>
+<% end %>
+</div>
+  <p><%= link_to "All Open Positions", positions_search_results_path %></p>

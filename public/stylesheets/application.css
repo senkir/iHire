@@ -1,0 +1,44 @@
+/* Styles for the open position search controller */
+
+#search {
+  padding: 10px
+}
+#mainHeader {
+  background: #eee000;
+  font: small-caps 15px "Times New Roman", serif;
+  padding: 20px;
+}
+
+#navbar {
+  background: #bbbeee;
+  padding: 10px;
+}
+
+#mainFooter {
+  background: #eee000;
+  font: small-caps 2px;
+}
+
+#results ul, form {
+  background: #ddd000;
+  padding: 10px;
+  padding-left: 25px;
+  width: 500px;
+}
+
+#results {
+  background: #eeefff;
+  padding: 5px;
+  clear: both;
+  font: 10px;
+  width: 600px;
+}
+
+#locationsColumn, #departmentsColumn {
+  background: #eeeeee;
+  width: 250px;
+  float: left;
+  border: 20px;
+  padding: 5px;
+
+}

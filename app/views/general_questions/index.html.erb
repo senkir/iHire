@@ -1,0 +1,23 @@
+<h1>Listing general_questions</h1>
+
+<table>
+  <tr>
+    <th> question</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @general_questions.each do |general_question| %>
+  <tr>
+    <td><%= general_question. question %></td>
+    <td><%= link_to 'Show', general_question %></td>
+    <td><%= link_to 'Edit', edit_general_question_path(general_question) %></td>
+    <td><%= link_to 'Destroy', general_question, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New General question', new_general_question_path %>

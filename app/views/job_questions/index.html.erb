@@ -1,0 +1,28 @@
+<h1>Question Set <%= @question.id %></h1>
+    <%= form_for :answer, @answer, :url => { :action => "create"}, :html => {:class => "answer_form"} do |f| %>
+    <% if @answer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@answer.errors.count, "error") %> prohibited this answer from being saved:</h2>
+
+      <ul>
+      <% @answer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= @question.question %><br/>
+    <%= f.radio_button :answer, "Yes" %> <%= f.label :answer_1, "Yes" %>
+	<%= f.radio_button :answer, "No" %> <%= f.label :answer_2, "No" %>
+  </p>
+  <p>
+    <%= submit_tag 'Create' %>
+  </p>
+  <% end %>
+  
