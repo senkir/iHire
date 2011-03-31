@@ -1,12 +1,4 @@
-
-<div id="searchBar">
-<%= form_tag  do %>
-  <%= label_tag("locations")%>
-<%= options_for_select @locations %>
-<%= label_tag("departments")%>
-  <%= options_for_select @departments %>
-<%= label_tag %>
-<% end %>
+<%= render :partial => "search_form" %>
 </div>
 <div id="results">
 <% if @query %>

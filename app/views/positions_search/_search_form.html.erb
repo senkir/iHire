@@ -1,0 +1,9 @@
+<div id="searchBar">
+<% semantic_form_for :position do |f| %>
+  <% f.inputs do %>
+    <%= f.input :title %>
+    <%= f.input :location, :collection => Position.find(:all, :select => "DISTINCT(location)").map(&:location) %>
+    <%= f.input :department, :collection => Position.find(:all, :select => "DISTINCT(department)").map(&:department) %>
+  <% end %>
+  <%= f.buttons :commit %>  
+<% end %>
