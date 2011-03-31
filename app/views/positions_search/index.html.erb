@@ -1,8 +1,17 @@
 <%= render :partial => "search_form" %>
 </div>
 <div id="results">
+  select * from positions where <%= query_for_search @query %><br />
 <% if @query %>
-<p>search entered!  now to do stuff.</p>
+  <% @results = results_for_query(@query) %>
+  <% if @results.count > 0 %>
+    found <%= @results.count %> results!
+    <% @results.each do |result| %>
+      result: <%= result.title %>
+    <% end %>
+  <% else %>
+  no results for query.
+  <% end %>
 <% else %>
 <p>no search entered yet.</p>
 <% end %>

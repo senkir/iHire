@@ -1,12 +1,31 @@
 module PositionsSearchHelper
   
-  def array_from_position_attribute(attribute)
-    @attribute = attribute
-    @attributeArray = Position.find(:all, :select => "DISTINCT(@attribute)").map(&:@attribute)
-    return @attributeArray
+  def results_for_query(query)
+    if query[:location]
+      @location = query[:location]
+    else
+      @location = "%"
+    end
+    if query[:department]
+      @department = query[:department]
+    else
+      @department = "%"
+    end
+    @where = 'location like \'' + @location + '\' and department like \'' + @department + '\''
+    Position.where( @where )
   end
   
-  def put_some_text(something)
-    return something
+  def query_for_search(query)
+        if query[:location]
+      @location = query[:location]
+    else
+      @location = "\%"
+    end
+    if query[:department]
+      @department = query[:department]
+    else
+      @department = "\%"
+    end
+    'location like \'' + @location + '\' and department like \'' + @department + '\''
   end
 end

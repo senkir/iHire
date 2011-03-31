@@ -18,9 +18,9 @@ IHireApplicant::Application.routes.draw do |map|
   get "job_questions/index"
 
   get "job_questions/results"    
-
+  match "/positions_search/index" => "positions_search#index"
   get "positions_search/index"
-
+  
   get "positions_search/results"
 
   get "positions_search/detail"

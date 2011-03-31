@@ -3,4 +3,4 @@
 
 en:
   formtastic:
-    submit: "Submit"
+      submit: "Submit"
