@@ -1,6 +1,6 @@
 class CreateAddresses < ActiveRecord::Migration
   def self.up
-    create_table :addresses, :primary_key => :pk, :force => true do |t|
+    create_table :addresses do |t|
       t.string :street, :limit => 50
       t.string :city,   :limit => 50
       t.string :state, :limit => 50

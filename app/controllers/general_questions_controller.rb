@@ -1,15 +1,4 @@
 class GeneralQuestionsController < ApplicationController
-  
-    aasm_column :current_state # defaults to aasm_state
-    
-    aasm_initial_state :new_applicant
-    
-    aasm_state :new_applicant
-    aasm_state :general_questions
-    aasm_state :job_specific_questions
-    aasm_state :personal_information
-    aasm_state :application_rejected
-    aasm_state :application_complete
     
   # GET /general_questions
   # GET /general_questions.xml

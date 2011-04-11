@@ -1,9 +1,11 @@
+#this controller should manage the initialization of a new applicant
+#including direcing them to the proper controller as needed
 class JobApplicationsController < ApplicationController  
   include AASM
   include JobApplicationsHelper
-    def index
-      if params[:id]
-        @application_state = ApplicationState.find(params[:id])
+    def index #default controller
+      if params[:state]
+        @application_state = ApplicationState.find(params[:state])
       else
       @application_state = ApplicationState.new
       @application_state.save
@@ -13,9 +15,11 @@ class JobApplicationsController < ApplicationController
     
     #transition to the next state
     def next
-      @application_state = ApplicationState.find(params[:id])      
+      @application_state = ApplicationState.find(params[:state])      
       @application_state.next
       @application_state.save
-      redirect_to(:action => "index", :id => params[:id] )
+      #redirect based on state
+      #for now this redirects to index page
+      redirect_to(:action => "index", :state => params[:state] )
     end
 end

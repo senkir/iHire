@@ -1,6 +1,6 @@
 class CreatePreviousEmployers < ActiveRecord::Migration
   def self.up 
-    create_table :previousEmployers, :primary_key => :pk do |t|
+    create_table :previousEmployers do |t|
       t.string  :employer
       t.string  :supervisor
       t.string  :position
