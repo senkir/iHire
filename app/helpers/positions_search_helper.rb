@@ -1,9 +1,11 @@
 module PositionsSearchHelper
   
+  #returns the result set from the query
   def results_for_query(query)
     Position.where( query_for_search query )
   end
   
+  #form a query based on the search parameters in the argument
   def query_for_search(query)
     if query[:location] != ''
       @location = query[:location]

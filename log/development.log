@@ -22098,3 +22098,2020 @@ Started GET "/job_application/index" for 127.0.0.1 at 2011-04-07 00:25:03 -0700
   Processing by JobApplicationController#index as HTML
 Rendered job_application/index.html.erb within layouts/application (1.9ms)
 Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-08 20:56:48 -0700
+  Processing by PositionsSearchController#index as HTML
+  [1m[36mPosition Load (23.1ms)[0m  [1mSELECT DISTINCT(location) FROM `positions` ORDER BY updated_on[0m
+  [1m[35mPosition Load (2.0ms)[0m  SELECT DISTINCT(department) FROM `positions` ORDER BY updated_on
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb___838677617718518701_2174513680_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb___838677617718518701_2174513680_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (195.8ms)
+Rendered positions_search/index.html.erb within layouts/application (207.0ms)
+Completed 200 OK in 217ms (Views: 191.5ms | ActiveRecord: 25.1ms)
+
+
+Started POST "/positions_search/index" for 127.0.0.1 at 2011-04-08 20:57:49 -0700
+  Processing by PositionsSearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w2cuymuk2kBfys4yCP8rPt7JZcZFm9MOmAhKtkJa064=", "position"=>{"title"=>"", "location"=>"", "department"=>""}, "commit"=>"Submit"}
+  [1m[36mPosition Load (10.0ms)[0m  [1mSELECT DISTINCT(location) FROM `positions` ORDER BY updated_on[0m
+  [1m[35mPosition Load (5.6ms)[0m  SELECT DISTINCT(department) FROM `positions` ORDER BY updated_on
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb___838677617718518701_2175250960_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb___838677617718518701_2175250960_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (47.1ms)
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)
+  [1m[36mPosition Load (1.5ms)[0m  [1mSELECT `positions`.* FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1) ORDER BY updated_on[0m
+Rendered positions_search/_result.html.erb (1.4ms)
+Rendered positions_search/_result.html.erb (1.0ms)
+Rendered positions_search/_result.html.erb (0.9ms)
+Rendered positions_search/_result.html.erb (1.0ms)
+Rendered positions_search/index.html.erb within layouts/application (64.3ms)
+Completed 200 OK in 71ms (Views: 52.8ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/job_application/index" for 127.0.0.1 at 2011-04-08 20:58:18 -0700
+  Processing by JobApplicationController#index as HTML
+Completed   in 88ms
+
+NameError (undefined local variable or method `aasm_initial_state' for #<JobApplicationController:0x000001030de748>):
+  app/controllers/job_application_controller.rb:23:in `index'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (132.5ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (183.1ms)
+
+
+Started GET "/job_application/index" for 127.0.0.1 at 2011-04-08 21:14:13 -0700
+  Processing by JobApplicationController#index as HTML
+Completed   in 66ms
+
+NameError (undefined local variable or method `aasm_initial_state' for #<JobApplicationController:0x0000010335d4d8>):
+  app/controllers/job_application_controller.rb:4:in `index'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (94.9ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (124.0ms)
+
+
+Started GET "/job_application/index" for 127.0.0.1 at 2011-04-08 21:19:10 -0700
+  Processing by JobApplicationController#index as HTML
+Completed   in 65ms
+
+NameError (undefined local variable or method `aasm_initial_state' for #<JobApplicationController:0x00000103390270>):
+  app/controllers/job_application_controller.rb:4:in `index'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (98.6ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (104.7ms)
+
+
+Started GET "/job_application/index" for 127.0.0.1 at 2011-04-08 21:19:57 -0700
+  Processing by JobApplicationController#index as HTML
+Completed   in 107ms
+
+Mysql2::Error (Table 'ihireapplicant_development.application_states' doesn't exist):
+  app/controllers/job_application_controller.rb:4:in `new'
+  app/controllers/job_application_controller.rb:4:in `index'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (97.5ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (103.5ms)
+
+
+Started GET "/job_application/index" for 127.0.0.1 at 2011-04-08 21:20:29 -0700
+  Processing by JobApplicationController#index as HTML
+Completed   in 7ms
+
+NoMethodError (undefined method `aasm_column' for ApplicationState:Class):
+  app/models/application_state.rb:4:in `<class:ApplicationState>'
+  app/models/application_state.rb:1:in `<top (required)>'
+  app/controllers/job_application_controller.rb:4:in `index'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (32.4ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (94.5ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (131.8ms)
+
+
+Started GET "/job_application/index" for 127.0.0.1 at 2011-04-08 21:21:46 -0700
+  Processing by JobApplicationController#index as HTML
+Completed   in 65ms
+
+NoMethodError (undefined method `aasm_column' for #<JobApplicationController:0x0000010319a0b0>):
+  app/controllers/job_application_controller.rb:4:in `index'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (96.7ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (131.3ms)
+
+
+Started GET "/job_application/index" for 127.0.0.1 at 2011-04-08 21:22:00 -0700
+  Processing by JobApplicationController#index as HTML
+Completed   in 65ms
+
+NoMethodError (undefined method `aasm_column' for #<JobApplicationController:0x00000103394690>):
+  app/controllers/job_application_controller.rb:5:in `index'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (96.4ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (102.6ms)
+
+
+Started GET "/job_application/index" for 127.0.0.1 at 2011-04-08 21:30:55 -0700
+  Processing by JobApplicationController#index as HTML
+Completed   in 7ms
+
+NoMethodError (undefined method `aasm_column' for ApplicationState:Class):
+  app/models/application_state.rb:4:in `<class:ApplicationState>'
+  app/models/application_state.rb:1:in `<top (required)>'
+  app/controllers/job_application_controller.rb:6:in `index'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (94.7ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (129.6ms)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+  [1m[36mSQL (34.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateAddresses (20110306213601)
+Migrating to CreateSchools (20110306213624)
+Migrating to CreateGeneralAnswers (20110306213655)
+Migrating to CreatePreviousEmployers (20110306213716)
+Migrating to CreatePositions (20110306223224)
+Migrating to CreateQuestions (20110309034902)
+Migrating to CreateAnswers (20110309035339)
+Migrating to CreateGeneralQuestions (20110311164542)
+Migrating to CreateApplicationStates (20110409043730)
+  [1m[35mSQL (118.1ms)[0m  CREATE TABLE `application_states` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `state` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (7.8ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110409043730')[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (2.9ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (1.1ms)[0m  SHOW KEYS FROM `addresses`
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `answers`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `answers`
+  [1m[36mSQL (2.5ms)[0m  [1mdescribe `application_states`[0m
+  [1m[35mSQL (1.1ms)[0m  SHOW KEYS FROM `application_states`
+  [1m[36mSQL (1.5ms)[0m  [1mdescribe `generalAnswers`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `generalAnswers`
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `general_questions`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `general_questions`
+  [1m[36mSQL (2.5ms)[0m  [1mdescribe `positions`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `positions`
+  [1m[36mSQL (2.8ms)[0m  [1mdescribe `previousEmployers`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `previousEmployers`
+  [1m[36mSQL (3.4ms)[0m  [1mdescribe `questions`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `questions`
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `schools`[0m
+  [1m[35mSQL (0.9ms)[0m  SHOW KEYS FROM `schools`
+
+
+Started GET "/job_application/index" for 127.0.0.1 at 2011-04-08 21:41:25 -0700
+  Processing by JobApplicationController#index as HTML
+Rendered job_application/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 84ms (Views: 69.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_application/index" for 127.0.0.1 at 2011-04-08 21:44:14 -0700
+  Processing by JobApplicationController#index as HTML
+Rendered job_application/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 28ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_application/index" for 127.0.0.1 at 2011-04-08 21:44:16 -0700
+  Processing by JobApplicationController#index as HTML
+Rendered job_application/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 31ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_application/index" for 127.0.0.1 at 2011-04-08 21:50:24 -0700
+  Processing by JobApplicationController#index as HTML
+Rendered job_application/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 24ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_application/index" for 127.0.0.1 at 2011-04-08 21:51:40 -0700
+  Processing by JobApplicationController#index as HTML
+Rendered job_application/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 59ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_application/index" for 127.0.0.1 at 2011-04-08 21:52:04 -0700
+  Processing by JobApplicationController#index as HTML
+Rendered job_application/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 27ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_application/index" for 127.0.0.1 at 2011-04-08 21:52:17 -0700
+  Processing by JobApplicationController#index as HTML
+Rendered job_application/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 29ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_application/index" for 127.0.0.1 at 2011-04-08 21:52:30 -0700
+  Processing by JobApplicationController#index as HTML
+Rendered job_application/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 29ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_application/index" for 127.0.0.1 at 2011-04-08 21:53:21 -0700
+  Processing by JobApplicationController#index as HTML
+Rendered job_application/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 27ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_application/index" for 127.0.0.1 at 2011-04-08 21:57:37 -0700
+  Processing by JobApplicationController#index as HTML
+Rendered job_application/index.html.erb within layouts/application (41.2ms)
+Completed 200 OK in 95ms (Views: 47.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_application/index" for 127.0.0.1 at 2011-04-08 21:57:54 -0700
+  Processing by JobApplicationController#index as HTML
+Rendered job_application/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 28ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_application/index" for 127.0.0.1 at 2011-04-08 21:58:32 -0700
+  Processing by JobApplicationController#index as HTML
+Rendered job_application/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 27ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_application/index" for 127.0.0.1 at 2011-04-08 22:00:00 -0700
+  Processing by JobApplicationController#index as HTML
+Rendered job_application/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 31ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_application/index" for 127.0.0.1 at 2011-04-08 22:02:52 -0700
+  Processing by JobApplicationController#index as HTML
+ERROR: compiling _app_views_job_application_index_html_erb___1457542716918655142_2173618380__4123265952253332378 RAISED /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/job_application/index.html.erb:2: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...lication_state.new_applicant? );@output_buffer.safe_concat('...
+...                               ^
+/Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/job_application/index.html.erb:8: syntax error, unexpected keyword_ensure, expecting ')'
+/Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/job_application/index.html.erb:10: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_job_application_index_html_erb___1457542716918655142_2173618380__4123265952253332378(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "job_application/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('find me on the moon!<br/>
+1 ');@output_buffer.append= ( if @application_state.new_applicant? );@output_buffer.safe_concat('<br/>
+New Applicant
+'); @application_state.next 
+@output_buffer.safe_concat('
+2 ');@output_buffer.append= ( @application_state.state );@output_buffer.safe_concat('<br/>
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/template.rb:255:in `module_eval'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/template.rb:255:in `compile'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/template.rb:134:in `block in render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:54:in `instrument'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/template.rb:127:in `render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:26:in `render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:93:in `render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/travischurchill/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:435:in `_run__1037180498681787591__process_action__1861960744139803224__callbacks'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:119:in `process'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:41:in `process'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal.rb:178:in `block in action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/warden-1.0.3/lib/warden/manager.rb:35:in `block in call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/warden-1.0.3/lib/warden/manager.rb:34:in `catch'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/warden-1.0.3/lib/warden/manager.rb:34:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:12:in `cache'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:31:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.5/lib/rails/rack/logger.rb:13:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.5/lib/rails/application.rb:168:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.5/lib/rails/application.rb:77:in `method_missing'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.5/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/travischurchill/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/travischurchill/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/travischurchill/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered job_application/index.html.erb within layouts/application (30.9ms)
+Completed   in 78ms
+
+ActionView::Template::Error (/Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/job_application/index.html.erb:2: syntax error, unexpected ')', expecting keyword_then or ';' or '\n'
+...lication_state.new_applicant? );@output_buffer.safe_concat('...
+...                               ^
+/Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/job_application/index.html.erb:8: syntax error, unexpected keyword_ensure, expecting ')'
+/Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/job_application/index.html.erb:10: syntax error, unexpected keyword_end, expecting ')'):
+    1: find me on the moon!<br/>
+    2: 1 <%= if @application_state.new_applicant? %><br/>
+    3: New Applicant
+    4: <% @application_state.next %>
+    5: 
+  
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (99.7ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (107.3ms)
+
+
+Started GET "/job_application/index" for 127.0.0.1 at 2011-04-08 22:03:08 -0700
+  Processing by JobApplicationController#index as HTML
+Rendered job_application/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 28ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 22:04:51 -0700
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+
+LoadError (Expected /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/helpers/job_applications_helper.rb to define JobApplicationsHelper):
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/job_applications_controller.rb:1:in `<top (required)>'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (41.9ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (17.6ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (64.3ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 22:05:36 -0700
+
+LoadError (Expected /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/controllers/job_applications_controller.rb to define JobApplicationsController):
+  
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (16.6ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-08 22:05:43 -0700
+  Processing by PositionsSearchController#index as HTML
+  [1m[35mPosition Load (2.3ms)[0m  SELECT DISTINCT(location) FROM `positions` ORDER BY updated_on
+  [1m[36mPosition Load (12.0ms)[0m  [1mSELECT DISTINCT(department) FROM `positions` ORDER BY updated_on[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb___838677617718518701_2174432400_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb___838677617718518701_2174432400_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (62.7ms)
+Rendered positions_search/index.html.erb within layouts/application (73.1ms)
+Completed 200 OK in 81ms (Views: 66.4ms | ActiveRecord: 14.3ms)
+
+
+Started POST "/positions_search/index" for 127.0.0.1 at 2011-04-08 22:05:45 -0700
+  Processing by PositionsSearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VwCQi0idWrQBTXQYYM+jWutx5QGeQZFJOxCcm605uIs=", "position"=>{"title"=>"", "location"=>"", "department"=>""}, "commit"=>"Submit"}
+  [1m[35mPosition Load (2.5ms)[0m  SELECT DISTINCT(location) FROM `positions` ORDER BY updated_on
+  [1m[36mPosition Load (4.3ms)[0m  [1mSELECT DISTINCT(department) FROM `positions` ORDER BY updated_on[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb___838677617718518701_2154230660_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb___838677617718518701_2154230660_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (82.2ms)
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)[0m
+  [1m[35mPosition Load (0.4ms)[0m  SELECT `positions`.* FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1) ORDER BY updated_on
+Rendered positions_search/_result.html.erb (1.4ms)
+Rendered positions_search/_result.html.erb (1.0ms)
+Rendered positions_search/_result.html.erb (0.9ms)
+Rendered positions_search/_result.html.erb (0.9ms)
+Rendered positions_search/index.html.erb within layouts/application (99.1ms)
+Completed 200 OK in 106ms (Views: 98.1ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 22:05:47 -0700
+
+LoadError (Expected /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/controllers/job_applications_controller.rb to define JobApplicationsController):
+  
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (51.1ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (57.0ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 22:06:03 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 29ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 22:13:11 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (4.5ms)
+Completed   in 26ms
+
+ActionView::Template::Error (undefined method `new_applicant' for #<ApplicationState:0x000001034cb748>):
+    1: find me on the moon!<br/>
+    2: 1 <%= name_for_state(@application_state)%><br/>
+    3: <% @application_state.next %>
+    4: 
+    5: 2 <%= @application_state.state %><br/>
+  app/helpers/job_applications_helper.rb:4:in `name_for_state'
+  app/views/job_applications/index.html.erb:2:in `_app_views_job_applications_index_html_erb__2643118572688682515_2174940560__4123265952253332378'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (99.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (106.1ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 22:13:24 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (223.3ms)
+Completed   in 246ms
+
+ActionView::Template::Error (undefined local variable or method `new_applicant' for #<#<Class:0x00000100d04868>:0x00000100cee810>):
+    1: find me on the moon!<br/>
+    2: 1 <%= name_for_state(@application_state)%><br/>
+    3: <% @application_state.next %>
+    4: 
+    5: 2 <%= @application_state.state %><br/>
+  app/helpers/job_applications_helper.rb:5:in `name_for_state'
+  app/views/job_applications/index.html.erb:2:in `_app_views_job_applications_index_html_erb__2643118572688682515_2154245600__4123265952253332378'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (103.6ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (110.6ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 22:14:04 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (190.5ms)
+Completed   in 212ms
+
+ActionView::Template::Error (undefined local variable or method `new_applicant' for #<#<Class:0x000001033407e8>:0x000001033394e8>):
+    1: find me on the moon!<br/>
+    2: 1 <% name_for_state(@application_state)%><br/>
+    3: <% @application_state.next %>
+    4: 
+    5: 2 <%= @application_state.general_questions? %><br/>
+  app/helpers/job_applications_helper.rb:5:in `name_for_state'
+  app/views/job_applications/index.html.erb:2:in `_app_views_job_applications_index_html_erb__2643118572688682515_2174336380__4123265952253332378'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (98.7ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (105.7ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 22:14:12 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 28ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 22:14:20 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (224.3ms)
+Completed   in 247ms
+
+ActionView::Template::Error (undefined local variable or method `new_applicant' for #<#<Class:0x00000100ad0c68>:0x00000100a53808>):
+    1: find me on the moon!<br/>
+    2: 1 <% name_for_state(@application_state)%><br/>
+    3: <% @application_state.next %>
+    4: 
+    5: 2 <%= @application_state.general_questions? %><br/>
+  app/helpers/job_applications_helper.rb:5:in `name_for_state'
+  app/views/job_applications/index.html.erb:2:in `_app_views_job_applications_index_html_erb__2643118572688682515_2152840640__4123265952253332378'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (101.6ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (108.8ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 22:14:48 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (195.2ms)
+Completed   in 251ms
+
+ActionView::Template::Error (undefined local variable or method `new_applicant' for #<#<Class:0x00000103534518>:0x00000103530da0>):
+    1: find me on the moon!<br/>
+    2: 1 <% name_for_state(@application_state)%><br/>
+    3: <% @application_state.next %>
+    4: 
+    5: 2 <%= @application_state.general_questions? %><br/>
+  app/helpers/job_applications_helper.rb:5:in `name_for_state'
+  app/views/job_applications/index.html.erb:2:in `_app_views_job_applications_index_html_erb__2643118572688682515_2175363480__4123265952253332378'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (100.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (107.1ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 22:14:56 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 63ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 22:15:11 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (226.2ms)
+Completed   in 248ms
+
+ActionView::Template::Error (undefined method `put' for #<#<Class:0x00000100e5ae60>:0x00000100e4e098>):
+    1: find me on the moon!<br/>
+    2: 1 <% name_for_state(@application_state)%><br/>
+    3: <% @application_state.next %>
+    4: 
+    5: 2 <%= @application_state.general_questions? %><br/>
+  app/helpers/job_applications_helper.rb:5:in `name_for_state'
+  app/views/job_applications/index.html.erb:2:in `_app_views_job_applications_index_html_erb__2643118572688682515_2154959880__4123265952253332378'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (99.8ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (106.9ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 22:15:17 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (41.1ms)
+Completed 200 OK in 63ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 22:15:39 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 29ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 22:15:41 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 59ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 22:15:53 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 28ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 22:19:57 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 28ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 22:20:53 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 65ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 23:18:24 -0700
+  Processing by JobApplicationsController#index as HTML
+ERROR: compiling _app_views_job_applications_index_html_erb__2643118572688682515_2174288280__4123265952253332378 RAISED /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/job_applications/index.html.erb:7: void value expression
+... 'next page', :action => next );@output_buffer.to_s
+...                               ^
+Function body:           def _app_views_job_applications_index_html_erb__2643118572688682515_2174288280__4123265952253332378(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "job_applications/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('find me on the moon!<br/>
+1 ');@output_buffer.append= ( name_for_state(@application_state));@output_buffer.safe_concat('<br/>
+'); @application_state.next 
+@output_buffer.safe_concat('
+2 ');@output_buffer.append= ( name_for_state(@application_state) );@output_buffer.safe_concat('<br/>
+
+');@output_buffer.append= ( link_to 'next page', :action => next );@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/template.rb:255:in `module_eval'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/template.rb:255:in `compile'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/template.rb:134:in `block in render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:54:in `instrument'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/template.rb:127:in `render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:26:in `render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:93:in `render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/travischurchill/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:435:in `_run__924804335373234907__process_action__1861960744139803224__callbacks'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:119:in `process'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:41:in `process'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal.rb:178:in `block in action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/warden-1.0.3/lib/warden/manager.rb:35:in `block in call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/warden-1.0.3/lib/warden/manager.rb:34:in `catch'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/warden-1.0.3/lib/warden/manager.rb:34:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:12:in `cache'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:31:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.5/lib/rails/rack/logger.rb:13:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.5/lib/rails/application.rb:168:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.5/lib/rails/application.rb:77:in `method_missing'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.5/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/travischurchill/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/travischurchill/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/travischurchill/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered job_applications/index.html.erb within layouts/application (1.2ms)
+Completed   in 23ms
+
+ActionView::Template::Error (/Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/job_applications/index.html.erb:7: void value expression
+... 'next page', :action => next );@output_buffer.to_s
+...                               ^):
+    4: 
+    5: 2 <%= name_for_state(@application_state) %><br/>
+    6: 
+    7: <%= link_to 'next page', :action => next %>
+  
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (103.5ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (131.3ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 23:18:41 -0700
+  Processing by JobApplicationsController#index as HTML
+ERROR: compiling _app_views_job_applications_index_html_erb__2643118572688682515_2153121560__4123265952253332378 RAISED /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/job_applications/index.html.erb:7: void value expression
+...= ( link_to 'next page', next );@output_buffer.to_s
+...                               ^
+Function body:           def _app_views_job_applications_index_html_erb__2643118572688682515_2153121560__4123265952253332378(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "job_applications/index";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('find me on the moon!<br/>
+1 ');@output_buffer.append= ( name_for_state(@application_state));@output_buffer.safe_concat('<br/>
+'); @application_state.next 
+@output_buffer.safe_concat('
+2 ');@output_buffer.append= ( name_for_state(@application_state) );@output_buffer.safe_concat('<br/>
+
+');@output_buffer.append= ( link_to 'next page', next );@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/template.rb:255:in `module_eval'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/template.rb:255:in `compile'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/template.rb:134:in `block in render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:54:in `instrument'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/template.rb:127:in `render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:56:in `_render_template'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_view/render/rendering.rb:26:in `render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:93:in `render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:17:in `render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/travischurchill/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:150:in `process_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:435:in `_run__924804335373234907__process_action__1861960744139803224__callbacks'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `block in instrument'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/notifications.rb:52:in `instrument'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/base.rb:119:in `process'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/abstract_controller/rendering.rb:41:in `process'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal.rb:138:in `dispatch'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_controller/metal.rb:178:in `block in action'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:68:in `optimized_each'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/warden-1.0.3/lib/warden/manager.rb:35:in `block in call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/warden-1.0.3/lib/warden/manager.rb:34:in `catch'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/warden-1.0.3/lib/warden/manager.rb:34:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:32:in `block in call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:12:in `cache'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:31:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.5/lib/rails/rack/logger.rb:13:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/activesupport-3.0.5/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/static.rb:30:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.5/lib/rails/application.rb:168:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.5/lib/rails/application.rb:77:in `method_missing'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/railties-3.0.5/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/Users/travischurchill/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/travischurchill/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/travischurchill/.rvm/rubies/ruby-1.9.2-p180/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered job_applications/index.html.erb within layouts/application (1.0ms)
+Completed   in 23ms
+
+ActionView::Template::Error (/Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/job_applications/index.html.erb:7: void value expression
+...= ( link_to 'next page', next );@output_buffer.to_s
+...                               ^):
+    4: 
+    5: 2 <%= name_for_state(@application_state) %><br/>
+    6: 
+    7: <%= link_to 'next page', next %>
+  
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (101.8ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (107.9ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 23:24:22 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (6.3ms)
+Completed   in 65ms
+
+ActionView::Template::Error (No route matches {:action=>"next", :controller=>"job_applications"}):
+    4: 
+    5: 2 <%= name_for_state(@application_state) %><br/>
+    6: 
+    7: <%= button_to 'next page', { :action => "next"}%>
+  app/views/job_applications/index.html.erb:7:in `_app_views_job_applications_index_html_erb__2643118572688682515_2185656040__4123265952253332378'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (101.1ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (107.3ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 23:29:39 -0700
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 30ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/job_applications/next" for 127.0.0.1 at 2011-04-08 23:29:47 -0700
+
+ActionController::RoutingError (No route matches "/job_applications/next"):
+  
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started POST "/job_applications/next" for 127.0.0.1 at 2011-04-08 23:30:05 -0700
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+
+ActionController::RoutingError (No route matches "/job_applications/next"):
+  
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 23:30:09 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 30ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/job_applications/next" for 127.0.0.1 at 2011-04-08 23:30:12 -0700
+
+ActionController::RoutingError (No route matches "/job_applications/next"):
+  
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-08 23:30:37 -0700
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+  Processing by PositionsSearchController#index as HTML
+  [1m[36mPosition Load (1.9ms)[0m  [1mSELECT DISTINCT(location) FROM `positions` ORDER BY updated_on[0m
+  [1m[35mPosition Load (16.8ms)[0m  SELECT DISTINCT(department) FROM `positions` ORDER BY updated_on
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb___838677617718518701_2185694880_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb___838677617718518701_2185694880_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (51.6ms)
+Rendered positions_search/index.html.erb within layouts/application (55.5ms)
+Completed 200 OK in 62ms (Views: 43.3ms | ActiveRecord: 18.6ms)
+
+
+Started POST "/positions_search/index" for 127.0.0.1 at 2011-04-08 23:30:39 -0700
+  Processing by PositionsSearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VwCQi0idWrQBTXQYYM+jWutx5QGeQZFJOxCcm605uIs=", "position"=>{"title"=>"", "location"=>"", "department"=>""}, "commit"=>"Submit"}
+  [1m[36mPosition Load (1.8ms)[0m  [1mSELECT DISTINCT(location) FROM `positions` ORDER BY updated_on[0m
+  [1m[35mPosition Load (20.9ms)[0m  SELECT DISTINCT(department) FROM `positions` ORDER BY updated_on
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb___838677617718518701_2176216920_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb___838677617718518701_2176216920_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (54.3ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)
+  [1m[36mPosition Load (0.4ms)[0m  [1mSELECT `positions`.* FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1) ORDER BY updated_on[0m
+Rendered positions_search/_result.html.erb (1.4ms)
+Rendered positions_search/_result.html.erb (1.1ms)
+Rendered positions_search/_result.html.erb (1.0ms)
+Rendered positions_search/_result.html.erb (0.9ms)
+Rendered positions_search/index.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 78ms (Views: 53.6ms | ActiveRecord: 23.6ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 23:30:41 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 31ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/job_applications/next" for 127.0.0.1 at 2011-04-08 23:30:43 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"authenticity_token"=>"VwCQi0idWrQBTXQYYM+jWutx5QGeQZFJOxCcm605uIs="}
+Completed   in 1ms
+
+NoMethodError (undefined method `next' for nil:NilClass):
+  app/controllers/job_applications_controller.rb:11:in `next'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (112.0ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (118.4ms)
+
+
+Started POST "/positions_search/index" for 127.0.0.1 at 2011-04-08 23:32:00 -0700
+  Processing by PositionsSearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VwCQi0idWrQBTXQYYM+jWutx5QGeQZFJOxCcm605uIs=", "position"=>{"title"=>"", "location"=>"", "department"=>""}, "commit"=>"Submit"}
+  [1m[35mPosition Load (2.1ms)[0m  SELECT DISTINCT(location) FROM `positions` ORDER BY updated_on
+  [1m[36mPosition Load (269.4ms)[0m  [1mSELECT DISTINCT(department) FROM `positions` ORDER BY updated_on[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb___838677617718518701_2185509020_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb___838677617718518701_2185509020_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (304.8ms)
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)[0m
+  [1m[35mPosition Load (0.3ms)[0m  SELECT `positions`.* FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1) ORDER BY updated_on
+Rendered positions_search/_result.html.erb (2.0ms)
+Rendered positions_search/_result.html.erb (1.1ms)
+Rendered positions_search/_result.html.erb (0.9ms)
+Rendered positions_search/_result.html.erb (0.9ms)
+Rendered positions_search/index.html.erb within layouts/application (321.4ms)
+Completed 200 OK in 328ms (Views: 55.7ms | ActiveRecord: 272.2ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 23:32:02 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 29ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/job_applications/next?application_state=" for 127.0.0.1 at 2011-04-08 23:32:04 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"authenticity_token"=>"VwCQi0idWrQBTXQYYM+jWutx5QGeQZFJOxCcm605uIs=", "application_state"=>""}
+Completed   in 1ms
+
+NoMethodError (undefined method `next' for nil:NilClass):
+  app/controllers/job_applications_controller.rb:12:in `next'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (109.5ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (116.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-08 23:32:52 -0700
+  Processing by PositionsSearchController#index as HTML
+  [1m[36mPosition Load (2.1ms)[0m  [1mSELECT DISTINCT(location) FROM `positions` ORDER BY updated_on[0m
+  [1m[35mPosition Load (3.7ms)[0m  SELECT DISTINCT(department) FROM `positions` ORDER BY updated_on
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb___838677617718518701_2176406380_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb___838677617718518701_2176406380_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (61.8ms)
+Rendered positions_search/index.html.erb within layouts/application (65.5ms)
+Completed 200 OK in 72ms (Views: 65.9ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/positions_search/index" for 127.0.0.1 at 2011-04-08 23:32:54 -0700
+  Processing by PositionsSearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VwCQi0idWrQBTXQYYM+jWutx5QGeQZFJOxCcm605uIs=", "position"=>{"title"=>"", "location"=>"", "department"=>""}, "commit"=>"Submit"}
+  [1m[36mPosition Load (2.1ms)[0m  [1mSELECT DISTINCT(location) FROM `positions` ORDER BY updated_on[0m
+  [1m[35mPosition Load (2.6ms)[0m  SELECT DISTINCT(department) FROM `positions` ORDER BY updated_on
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb___838677617718518701_2173785960_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb___838677617718518701_2173785960_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (110.3ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)
+  [1m[36mPosition Load (0.3ms)[0m  [1mSELECT `positions`.* FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1) ORDER BY updated_on[0m
+Rendered positions_search/_result.html.erb (1.5ms)
+Rendered positions_search/_result.html.erb (1.2ms)
+Rendered positions_search/_result.html.erb (1.5ms)
+Rendered positions_search/_result.html.erb (1.1ms)
+Rendered positions_search/index.html.erb within layouts/application (128.1ms)
+Completed 200 OK in 135ms (Views: 129.1ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 23:32:59 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 29ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/job_applications/next?application_state=" for 127.0.0.1 at 2011-04-08 23:33:01 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"authenticity_token"=>"VwCQi0idWrQBTXQYYM+jWutx5QGeQZFJOxCcm605uIs=", "application_state"=>""}
+Redirected to 
+Completed   in 1ms
+
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  app/controllers/job_applications_controller.rb:13:in `next'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (114.1ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (120.0ms)
+
+
+Started GET "/job_applications" for 127.0.0.1 at 2011-04-08 23:35:50 -0700
+
+ActionController::RoutingError (No route matches "/job_applications"):
+  
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 23:35:54 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 28ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/job_applications/next?application_state=" for 127.0.0.1 at 2011-04-08 23:35:56 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"authenticity_token"=>"VwCQi0idWrQBTXQYYM+jWutx5QGeQZFJOxCcm605uIs=", "application_state"=>""}
+Redirected to 
+Completed   in 1ms
+
+NoMethodError (undefined method `delete' for :application_state:Symbol):
+  app/controllers/job_applications_controller.rb:14:in `next'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (110.6ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (116.4ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 23:37:42 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 28ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/job_applications/next?application_state=" for 127.0.0.1 at 2011-04-08 23:37:43 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"authenticity_token"=>"VwCQi0idWrQBTXQYYM+jWutx5QGeQZFJOxCcm605uIs=", "application_state"=>""}
+Redirected to 
+Completed   in 1ms
+
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  app/controllers/job_applications_controller.rb:14:in `next'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (110.7ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (116.6ms)
+
+
+Started POST "/job_applications/next?application_state=" for 127.0.0.1 at 2011-04-08 23:39:55 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"authenticity_token"=>"VwCQi0idWrQBTXQYYM+jWutx5QGeQZFJOxCcm605uIs=", "application_state"=>""}
+Redirected to 
+Completed   in 1ms
+
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  app/controllers/job_applications_controller.rb:14:in `next'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (107.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (113.8ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 23:40:38 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 30ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/job_applications/index?application_state=true" for 127.0.0.1 at 2011-04-08 23:40:40 -0700
+
+ActionController::RoutingError (No route matches "/job_applications/index"):
+  
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 23:40:42 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 38ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/job_applications/index?application_state=true" for 127.0.0.1 at 2011-04-08 23:40:44 -0700
+
+ActionController::RoutingError (No route matches "/job_applications/index"):
+  
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-08 23:40:59 -0700
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+  Processing by PositionsSearchController#index as HTML
+  [1m[35mPosition Load (2.1ms)[0m  SELECT DISTINCT(location) FROM `positions` ORDER BY updated_on
+  [1m[36mPosition Load (3.2ms)[0m  [1mSELECT DISTINCT(department) FROM `positions` ORDER BY updated_on[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb___838677617718518701_2173995940_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb___838677617718518701_2173995940_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (64.4ms)
+Rendered positions_search/index.html.erb within layouts/application (68.3ms)
+Completed 200 OK in 75ms (Views: 69.7ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/positions_search/index" for 127.0.0.1 at 2011-04-08 23:41:02 -0700
+  Processing by PositionsSearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VwCQi0idWrQBTXQYYM+jWutx5QGeQZFJOxCcm605uIs=", "position"=>{"title"=>"", "location"=>"", "department"=>""}, "commit"=>"Submit"}
+  [1m[35mPosition Load (2.6ms)[0m  SELECT DISTINCT(location) FROM `positions` ORDER BY updated_on
+  [1m[36mPosition Load (2.1ms)[0m  [1mSELECT DISTINCT(department) FROM `positions` ORDER BY updated_on[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb___838677617718518701_2162278220_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb___838677617718518701_2162278220_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (65.1ms)
+  [1m[35mSQL (0.4ms)[0m  SELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)[0m
+  [1m[35mPosition Load (0.3ms)[0m  SELECT `positions`.* FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1) ORDER BY updated_on
+Rendered positions_search/_result.html.erb (1.4ms)
+Rendered positions_search/_result.html.erb (1.1ms)
+Rendered positions_search/_result.html.erb (1.0ms)
+Rendered positions_search/_result.html.erb (1.1ms)
+Rendered positions_search/index.html.erb within layouts/application (81.3ms)
+Completed 200 OK in 88ms (Views: 82.3ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 23:41:04 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 30ms (Views: 14.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/job_applications/index?application_state=true" for 127.0.0.1 at 2011-04-08 23:41:05 -0700
+
+ActionController::RoutingError (No route matches "/job_applications/index"):
+  
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 23:41:11 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 28ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/job_applications/index?application_state=true" for 127.0.0.1 at 2011-04-08 23:41:13 -0700
+
+ActionController::RoutingError (No route matches "/job_applications/index"):
+  
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 23:41:42 -0700
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 304ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/job_applications/index?application_state=true" for 127.0.0.1 at 2011-04-08 23:41:49 -0700
+  Processing by JobApplicationsController#index as HTML
+  Parameters: {"authenticity_token"=>"VwCQi0idWrQBTXQYYM+jWutx5QGeQZFJOxCcm605uIs=", "application_state"=>"true"}
+Rendered job_applications/index.html.erb within layouts/application (0.7ms)
+Completed   in 8ms
+
+ActionView::Template::Error (undefined method `new_applicant?' for "true":String):
+    1: find me on the moon!<br/>
+    2: <%= name_for_state(@application_state)%><br/>
+    3: 
+    4: <%= button_to 'next page', { :action => "index", :application_state => @application_state.next }%>
+  app/helpers/job_applications_helper.rb:5:in `name_for_state'
+  app/views/job_applications/index.html.erb:2:in `_app_views_job_applications_index_html_erb__2643118572688682515_2185592460__4123265952253332378'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (108.6ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (115.0ms)
+
+
+Started GET "/job_applications/" for 127.0.0.1 at 2011-04-08 23:42:18 -0700
+
+ActionController::RoutingError (No route matches "/job_applications"):
+  
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 23:42:21 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 30ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/job_applications/index?application_state=" for 127.0.0.1 at 2011-04-08 23:42:23 -0700
+  Processing by JobApplicationsController#index as HTML
+  Parameters: {"authenticity_token"=>"VwCQi0idWrQBTXQYYM+jWutx5QGeQZFJOxCcm605uIs=", "application_state"=>""}
+Rendered job_applications/index.html.erb within layouts/application (0.7ms)
+Completed   in 7ms
+
+ActionView::Template::Error (undefined method `new_applicant?' for "":String):
+    1: find me on the moon!<br/>
+    2: <%= name_for_state(@application_state)%><br/>
+    3: 
+    4: <%= button_to 'next page', { :action => "index", :application_state => @application_state }%>
+  app/helpers/job_applications_helper.rb:5:in `name_for_state'
+  app/views/job_applications/index.html.erb:2:in `_app_views_job_applications_index_html_erb__2643118572688682515_2175977840__4123265952253332378'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (108.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (114.6ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 23:44:26 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 29ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 23:44:28 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 29ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/job_applications/index?application_state=true" for 127.0.0.1 at 2011-04-08 23:44:30 -0700
+  Processing by JobApplicationsController#index as HTML
+  Parameters: {"authenticity_token"=>"VwCQi0idWrQBTXQYYM+jWutx5QGeQZFJOxCcm605uIs=", "application_state"=>"true"}
+Rendered job_applications/index.html.erb within layouts/application (1.4ms)
+Completed   in 8ms
+
+ActionView::Template::Error (undefined method `new_applicant?' for "true":String):
+    1: find me on the moon!<br/>
+    2: <%= name_for_state(@application_state)%><br/>
+    3: 
+    4: <%= button_to 'next page', { :action => "index", :application_state => @application_state.next }%>
+  app/helpers/job_applications_helper.rb:5:in `name_for_state'
+  app/views/job_applications/index.html.erb:2:in `_app_views_job_applications_index_html_erb__2643118572688682515_2175482540__4123265952253332378'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (111.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (117.7ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 23:45:18 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 30ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 23:45:19 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 75ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/job_applications/index?application_state=" for 127.0.0.1 at 2011-04-08 23:45:20 -0700
+  Processing by JobApplicationsController#index as HTML
+  Parameters: {"authenticity_token"=>"VwCQi0idWrQBTXQYYM+jWutx5QGeQZFJOxCcm605uIs=", "application_state"=>""}
+Rendered job_applications/index.html.erb within layouts/application (0.8ms)
+Completed   in 8ms
+
+ActionView::Template::Error (undefined method `new_applicant?' for "":String):
+    1: find me on the moon!<br/>
+    2: <%= name_for_state(@application_state)%><br/>
+    3: <% @application_state.next %>
+    4: <%= button_to 'next page', { :action => "index", :application_state => @application_state }%>
+  app/helpers/job_applications_helper.rb:5:in `name_for_state'
+  app/views/job_applications/index.html.erb:2:in `_app_views_job_applications_index_html_erb__2643118572688682515_2176572900__4123265952253332378'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (111.5ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (117.7ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-08 23:55:47 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 30ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_applications/index?application_state=" for 127.0.0.1 at 2011-04-08 23:55:49 -0700
+  Processing by JobApplicationsController#index as HTML
+  Parameters: {"application_state"=>""}
+Rendered job_applications/index.html.erb within layouts/application (0.7ms)
+Completed   in 7ms
+
+ActionView::Template::Error (undefined method `new_applicant?' for "":String):
+    1: find me on the moon!<br/>
+    2: <%= name_for_state(@application_state)%><br/>
+    3: <% @application_state.next %>
+    4: <%= link_to 'next page', { :action => "index", :application_state => @application_state }%>
+  app/helpers/job_applications_helper.rb:5:in `name_for_state'
+  app/views/job_applications/index.html.erb:2:in `_app_views_job_applications_index_html_erb__2643118572688682515_2173600960__4123265952253332378'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (108.8ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (114.7ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:01:22 -0700
+
+Mysql2::Error (Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)):
+  
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:01:41 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 45ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_applications/index?application_state=general_questions" for 127.0.0.1 at 2011-04-09 00:01:51 -0700
+  Processing by JobApplicationsController#index as HTML
+  Parameters: {"application_state"=>"general_questions"}
+Rendered job_applications/index.html.erb within layouts/application (0.8ms)
+Completed   in 8ms
+
+ActionView::Template::Error (undefined method `new_applicant?' for "general_questions":String):
+    1: find me on the moon!<br/>
+    2: <%= name_for_state(@application_state)%><br/>
+    3: <% @application_state.next %>
+    4: <%= link_to 'next page', { :action => "index", :application_state => @application_state.state } %>
+  app/helpers/job_applications_helper.rb:5:in `name_for_state'
+  app/views/job_applications/index.html.erb:2:in `_app_views_job_applications_index_html_erb__2643118572688682515_2175992680__4123265952253332378'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (112.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (118.8ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:02:32 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 30ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:02:35 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 76ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:02:37 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 29ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:02:39 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 30ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:03:46 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 29ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_applications/next" for 127.0.0.1 at 2011-04-09 00:03:48 -0700
+  Processing by JobApplicationsController#next as HTML
+Completed   in 1ms
+
+NoMethodError (undefined method `new' for nil:NilClass):
+  app/controllers/job_applications_controller.rb:12:in `next'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (74.4ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (126.5ms)
+
+
+Started GET "/job_applications/next" for 127.0.0.1 at 2011-04-09 00:03:48 -0700
+  Processing by JobApplicationsController#next as HTML
+Completed   in 1ms
+
+NoMethodError (undefined method `new' for nil:NilClass):
+  app/controllers/job_applications_controller.rb:12:in `next'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (111.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (117.6ms)
+
+
+Started GET "/job_applications/next" for 127.0.0.1 at 2011-04-09 00:04:01 -0700
+  Processing by JobApplicationsController#next as HTML
+Redirected to 
+Completed   in 61ms
+
+NoMethodError (undefined method `application_states_url' for #<JobApplicationsController:0x0000010488a860>):
+  app/controllers/job_applications_controller.rb:15:in `next'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (71.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (125.8ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:04:06 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 29ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_applications/next" for 127.0.0.1 at 2011-04-09 00:04:08 -0700
+  Processing by JobApplicationsController#next as HTML
+Redirected to 
+Completed   in 103ms
+
+NoMethodError (undefined method `application_states_url' for #<JobApplicationsController:0x00000103455e08>):
+  app/controllers/job_applications_controller.rb:15:in `next'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (109.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (116.3ms)
+
+
+Started GET "/job_applications/next" for 127.0.0.1 at 2011-04-09 00:06:21 -0700
+  Processing by JobApplicationsController#next as HTML
+Completed   in 12ms
+
+ActiveRecord::RecordNotFound (Couldn't find ApplicationState without an ID):
+  app/controllers/job_applications_controller.rb:12:in `next'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (111.6ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (117.8ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:06:26 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 29ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:06:29 -0700
+  Processing by JobApplicationsController#index as HTML
+Rendered job_applications/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 31ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/job_applications/next" for 127.0.0.1 at 2011-04-09 00:06:31 -0700
+  Processing by JobApplicationsController#next as HTML
+Completed   in 14ms
+
+ActiveRecord::RecordNotFound (Couldn't find ApplicationState without an ID):
+  app/controllers/job_applications_controller.rb:12:in `next'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (121.0ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (128.2ms)
+
+
+Started GET "/job_applications/next" for 127.0.0.1 at 2011-04-09 00:08:31 -0700
+  Processing by JobApplicationsController#next as HTML
+Completed   in 14ms
+
+ActiveRecord::RecordNotFound (Couldn't find ApplicationState without an ID):
+  app/controllers/job_applications_controller.rb:13:in `next'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (120.9ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (127.7ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:08:35 -0700
+  Processing by JobApplicationsController#index as HTML
+  [1m[36mSQL (36.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (13.5ms)[0m  [1mdescribe `application_states`[0m
+  [1m[35mAREL (12.6ms)[0m  INSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-09 07:08:35', '2011-04-09 07:08:35')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+Rendered job_applications/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 127ms (Views: 10.8ms | ActiveRecord: 63.9ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:08:36 -0700
+  Processing by JobApplicationsController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.9ms)[0m  [1mdescribe `application_states`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-09 07:08:36', '2011-04-09 07:08:36')
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+Rendered job_applications/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 63ms (Views: 11.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/job_applications/next?id=2" for 127.0.0.1 at 2011-04-09 00:08:38 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mApplicationState Load (0.4ms)[0m  SELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 2 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.1ms)[0m  describe `application_states`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-09 07:08:38', '2011-04-09 07:08:38')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+Redirected to 
+Completed   in 55ms
+
+NoMethodError (undefined method `model_name' for TrueClass:Class):
+  app/controllers/job_applications_controller.rb:15:in `next'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (115.0ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (121.5ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:10:05 -0700
+  Processing by JobApplicationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  describe `application_states`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-09 07:10:05', '2011-04-09 07:10:05')[0m
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+Rendered job_applications/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 60ms (Views: 12.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:10:07 -0700
+  Processing by JobApplicationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  describe `application_states`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-09 07:10:07', '2011-04-09 07:10:07')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Rendered job_applications/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 55ms (Views: 10.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/job_applications/next?id=5" for 127.0.0.1 at 2011-04-09 00:10:10 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mApplicationState Load (0.3ms)[0m  [1mSELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (35.7ms)[0m  [1mUPDATE `application_states` SET `state` = 'general_questions', `updated_at` = '2011-04-09 07:10:10' WHERE `application_states`.`id` = 5[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (13.8ms)[0m  describe `application_states`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-09 07:10:10', '2011-04-09 07:10:10')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Redirected to 
+Completed   in 86ms
+
+NoMethodError (undefined method `model_name' for TrueClass:Class):
+  app/controllers/job_applications_controller.rb:16:in `next'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (128.4ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (134.9ms)
+
+
+Started GET "/job_applications/next?id=5" for 127.0.0.1 at 2011-04-09 00:11:14 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  describe `application_states`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-09 07:11:14', '2011-04-09 07:11:14')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Redirected to 
+Completed   in 52ms
+
+NoMethodError (undefined method `model_name' for TrueClass:Class):
+  app/controllers/job_applications_controller.rb:14:in `next'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (72.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (128.0ms)
+
+
+Started GET "/job_applications/next?id=5" for 127.0.0.1 at 2011-04-09 00:11:53 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"id"=>"5"}
+Redirected to http://localhost:3000/job_applications/index
+Completed 302 Found in 1ms
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:11:53 -0700
+  Processing by JobApplicationsController#index as HTML
+  [1m[36mSQL (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.1ms)[0m  describe `application_states`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-09 07:11:53', '2011-04-09 07:11:53')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Rendered job_applications/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 67ms (Views: 11.6ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:12:11 -0700
+  Processing by JobApplicationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (3.1ms)[0m  describe `application_states`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-09 07:12:11', '2011-04-09 07:12:11')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Rendered job_applications/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 72ms (Views: 11.1ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/job_applications/next?id=9" for 127.0.0.1 at 2011-04-09 00:12:13 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mApplicationState Load (0.4ms)[0m  [1mSELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 9 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE `application_states` SET `state` = 'general_questions', `updated_at` = '2011-04-09 07:12:13' WHERE `application_states`.`id` = 9[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/job_applications/index
+Completed 302 Found in 108ms
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:12:13 -0700
+  Processing by JobApplicationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  describe `application_states`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-09 07:12:13', '2011-04-09 07:12:13')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+Rendered job_applications/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 49ms (Views: 12.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/job_applications/next?id=10" for 127.0.0.1 at 2011-04-09 00:12:17 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mApplicationState Load (0.3ms)[0m  [1mSELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 10 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE `application_states` SET `state` = 'general_questions', `updated_at` = '2011-04-09 07:12:17' WHERE `application_states`.`id` = 10[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/job_applications/index
+Completed 302 Found in 50ms
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:12:17 -0700
+  Processing by JobApplicationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  describe `application_states`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-09 07:12:17', '2011-04-09 07:12:17')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+Rendered job_applications/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 46ms (Views: 11.9ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:13:23 -0700
+  Processing by JobApplicationsController#index as HTML
+Completed   in 13ms
+
+ActiveRecord::RecordNotFound (Couldn't find ApplicationState without an ID):
+  app/controllers/job_applications_controller.rb:5:in `index'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (129.5ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (136.4ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:14:14 -0700
+  Processing by JobApplicationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  describe `application_states`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-09 07:14:14', '2011-04-09 07:14:14')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Rendered job_applications/index.html.erb within layouts/application (53.3ms)
+Completed 200 OK in 111ms (Views: 63.2ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/job_applications/next?id=12" for 127.0.0.1 at 2011-04-09 00:14:17 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mApplicationState Load (0.3ms)[0m  [1mSELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 12 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE `application_states` SET `state` = 'general_questions', `updated_at` = '2011-04-09 07:14:17' WHERE `application_states`.`id` = 12[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/job_applications/index
+Completed 302 Found in 55ms
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:14:17 -0700
+  Processing by JobApplicationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  describe `application_states`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-09 07:14:17', '2011-04-09 07:14:17')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Rendered job_applications/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 43ms (Views: 11.7ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/job_applications/next?id=13" for 127.0.0.1 at 2011-04-09 00:14:19 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mApplicationState Load (0.3ms)[0m  [1mSELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 13 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE `application_states` SET `state` = 'general_questions', `updated_at` = '2011-04-09 07:14:19' WHERE `application_states`.`id` = 13[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/job_applications/index
+Completed 302 Found in 55ms
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:14:19 -0700
+  Processing by JobApplicationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.1ms)[0m  describe `application_states`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-09 07:14:19', '2011-04-09 07:14:19')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+Rendered job_applications/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 58ms (Views: 12.4ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-09 00:15:02 -0700
+  Processing by PositionsSearchController#index as HTML
+  [1m[36mPosition Load (26.5ms)[0m  [1mSELECT DISTINCT(location) FROM `positions` ORDER BY updated_on[0m
+  [1m[35mPosition Load (2.0ms)[0m  SELECT DISTINCT(department) FROM `positions` ORDER BY updated_on
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb___838677617718518701_2202036340_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb___838677617718518701_2202036340_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (66.4ms)
+Rendered positions_search/index.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 80ms (Views: 50.4ms | ActiveRecord: 28.6ms)
+
+
+Started POST "/positions_search/index" for 127.0.0.1 at 2011-04-09 00:15:04 -0700
+  Processing by PositionsSearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VwCQi0idWrQBTXQYYM+jWutx5QGeQZFJOxCcm605uIs=", "position"=>{"title"=>"", "location"=>"", "department"=>""}, "commit"=>"Submit"}
+  [1m[36mPosition Load (2.2ms)[0m  [1mSELECT DISTINCT(location) FROM `positions` ORDER BY updated_on[0m
+  [1m[35mPosition Load (19.7ms)[0m  SELECT DISTINCT(department) FROM `positions` ORDER BY updated_on
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb___838677617718518701_2175985080_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb___838677617718518701_2175985080_2925894994965251138 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (58.0ms)
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)
+  [1m[36mPosition Load (0.4ms)[0m  [1mSELECT `positions`.* FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1) ORDER BY updated_on[0m
+Rendered positions_search/_result.html.erb (1.6ms)
+Rendered positions_search/_result.html.erb (1.3ms)
+Rendered positions_search/_result.html.erb (1.2ms)
+Rendered positions_search/_result.html.erb (1.1ms)
+Rendered positions_search/index.html.erb within layouts/application (77.3ms)
+Completed 200 OK in 85ms (Views: 61.9ms | ActiveRecord: 22.8ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:15:09 -0700
+  Processing by JobApplicationsController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `application_states`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-09 07:15:09', '2011-04-09 07:15:09')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+Rendered job_applications/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 69ms (Views: 14.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/job_applications/next?id=15" for 127.0.0.1 at 2011-04-09 00:15:14 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"id"=>"15"}
+  [1m[35mApplicationState Load (0.3ms)[0m  SELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 15 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE `application_states` SET `state` = 'general_questions', `updated_at` = '2011-04-09 07:15:14' WHERE `application_states`.`id` = 15
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/job_applications/index
+Completed 302 Found in 45ms
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:15:14 -0700
+  Processing by JobApplicationsController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (2.0ms)[0m  [1mdescribe `application_states`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-09 07:15:14', '2011-04-09 07:15:14')
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+Rendered job_applications/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 113ms (Views: 11.9ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/job_applications/next?id=16" for 127.0.0.1 at 2011-04-09 00:15:17 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"id"=>"16"}
+  [1m[35mApplicationState Load (0.3ms)[0m  SELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 16 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (1.5ms)[0m  UPDATE `application_states` SET `state` = 'general_questions', `updated_at` = '2011-04-09 07:15:17' WHERE `application_states`.`id` = 16
+  [1m[36mSQL (0.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/job_applications/index
+Completed 302 Found in 30ms
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:15:17 -0700
+  Processing by JobApplicationsController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `application_states`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-09 07:15:17', '2011-04-09 07:15:17')
+  [1m[36mSQL (1.2ms)[0m  [1mCOMMIT[0m
+Rendered job_applications/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 44ms (Views: 11.5ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:16:03 -0700
+  Processing by JobApplicationsController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.9ms)[0m  [1mdescribe `application_states`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-09 07:16:03', '2011-04-09 07:16:03')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+Rendered job_applications/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 60ms (Views: 12.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/job_applications/next?id=18" for 127.0.0.1 at 2011-04-09 00:16:06 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mApplicationState Load (0.4ms)[0m  SELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 18 LIMIT 1
+Redirected to http://localhost:3000/job_applications/index
+Completed 302 Found in 54ms
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:16:06 -0700
+  Processing by JobApplicationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  describe `application_states`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-09 07:16:06', '2011-04-09 07:16:06')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Rendered job_applications/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 43ms (Views: 11.5ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:16:32 -0700
+  Processing by JobApplicationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  describe `application_states`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-09 07:16:32', '2011-04-09 07:16:32')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+Rendered job_applications/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 49ms (Views: 12.4ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/job_applications/next?id=20" for 127.0.0.1 at 2011-04-09 00:16:35 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mApplicationState Load (0.3ms)[0m  [1mSELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 20 LIMIT 1[0m
+Redirected to http://localhost:3000/job_applications/index?id=20
+Completed 302 Found in 51ms
+
+
+Started GET "/job_applications/index?id=20" for 127.0.0.1 at 2011-04-09 00:16:35 -0700
+  Processing by JobApplicationsController#index as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mApplicationState Load (0.3ms)[0m  SELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 20 LIMIT 1
+Rendered job_applications/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 35ms (Views: 18.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/job_applications/next?id=20" for 127.0.0.1 at 2011-04-09 00:16:38 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mApplicationState Load (0.3ms)[0m  [1mSELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 20 LIMIT 1[0m
+Redirected to http://localhost:3000/job_applications/index?id=20
+Completed 302 Found in 118ms
+
+
+Started GET "/job_applications/index?id=20" for 127.0.0.1 at 2011-04-09 00:16:38 -0700
+  Processing by JobApplicationsController#index as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mApplicationState Load (0.3ms)[0m  SELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 20 LIMIT 1
+Rendered job_applications/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 35ms (Views: 17.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/job_applications/next?id=20" for 127.0.0.1 at 2011-04-09 00:16:41 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mApplicationState Load (0.4ms)[0m  [1mSELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 20 LIMIT 1[0m
+Redirected to http://localhost:3000/job_applications/index?id=20
+Completed 302 Found in 48ms
+
+
+Started GET "/job_applications/index?id=20" for 127.0.0.1 at 2011-04-09 00:16:41 -0700
+  Processing by JobApplicationsController#index as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mApplicationState Load (0.3ms)[0m  SELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 20 LIMIT 1
+Rendered job_applications/index.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 37ms (Views: 19.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/job_applications/index?id=20" for 127.0.0.1 at 2011-04-09 00:16:50 -0700
+  Processing by JobApplicationsController#index as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mApplicationState Load (0.3ms)[0m  [1mSELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 20 LIMIT 1[0m
+Rendered job_applications/index.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 55ms (Views: 37.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/job_applications/next?id=20" for 127.0.0.1 at 2011-04-09 00:16:52 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mApplicationState Load (0.3ms)[0m  SELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 20 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE `application_states` SET `state` = 'general_questions', `updated_at` = '2011-04-09 07:16:52' WHERE `application_states`.`id` = 20
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/job_applications/index?id=20
+Completed 302 Found in 58ms
+
+
+Started GET "/job_applications/index?id=20" for 127.0.0.1 at 2011-04-09 00:16:52 -0700
+  Processing by JobApplicationsController#index as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mApplicationState Load (0.3ms)[0m  SELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 20 LIMIT 1
+Rendered job_applications/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 35ms (Views: 17.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/job_applications/next?id=20" for 127.0.0.1 at 2011-04-09 00:16:53 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mApplicationState Load (0.6ms)[0m  [1mSELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 20 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE `application_states` SET `state` = 'job_specific_questions', `updated_at` = '2011-04-09 07:16:53' WHERE `application_states`.`id` = 20[0m
+  [1m[35mSQL (20.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/job_applications/index?id=20
+Completed 302 Found in 62ms
+
+
+Started GET "/job_applications/index?id=20" for 127.0.0.1 at 2011-04-09 00:16:53 -0700
+  Processing by JobApplicationsController#index as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mApplicationState Load (0.4ms)[0m  [1mSELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 20 LIMIT 1[0m
+Rendered job_applications/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 41ms (Views: 23.2ms | ActiveRecord: 22.3ms)
+
+
+Started GET "/job_applications/next?id=20" for 127.0.0.1 at 2011-04-09 00:16:54 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mApplicationState Load (0.3ms)[0m  SELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 20 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE `application_states` SET `state` = 'personal_information', `updated_at` = '2011-04-09 07:16:54' WHERE `application_states`.`id` = 20
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/job_applications/index?id=20
+Completed 302 Found in 56ms
+
+
+Started GET "/job_applications/index?id=20" for 127.0.0.1 at 2011-04-09 00:16:54 -0700
+  Processing by JobApplicationsController#index as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mApplicationState Load (0.3ms)[0m  SELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 20 LIMIT 1
+Rendered job_applications/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 40ms (Views: 16.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/job_applications/next?id=20" for 127.0.0.1 at 2011-04-09 00:16:55 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mApplicationState Load (0.4ms)[0m  [1mSELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 20 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE `application_states` SET `state` = 'in_review', `updated_at` = '2011-04-09 07:16:55' WHERE `application_states`.`id` = 20[0m
+  [1m[35mSQL (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/job_applications/index?id=20
+Completed 302 Found in 38ms
+
+
+Started GET "/job_applications/index?id=20" for 127.0.0.1 at 2011-04-09 00:16:55 -0700
+  Processing by JobApplicationsController#index as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mApplicationState Load (0.3ms)[0m  [1mSELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 20 LIMIT 1[0m
+Rendered job_applications/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 41ms (Views: 22.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/job_applications/next?id=20" for 127.0.0.1 at 2011-04-09 00:16:56 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"id"=>"20"}
+  [1m[35mApplicationState Load (0.3ms)[0m  SELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 20 LIMIT 1
+Completed   in 23ms
+
+AASM::InvalidTransition (Event 'next' cannot transition from 'in_review'):
+  app/controllers/job_applications_controller.rb:15:in `next'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (140.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (146.7ms)
