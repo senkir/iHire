@@ -24543,3 +24543,67 @@ Migrating to CreatePositionSpecificAnswers (20110411012833)
   [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `questions`
   [1m[36mSQL (1.7ms)[0m  [1mdescribe `schools`[0m
   [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `schools`
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+  [1m[36mSQL (0.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (43.7ms)[0m  CREATE TABLE `addresses` (`pk` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `street` varchar(50), `city` varchar(50), `state` varchar(50), `zip` varchar(50), `phone` varchar(50)) ENGINE=InnoDB
+  [1m[36mSQL (0.4ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (114.5ms)[0m  CREATE TABLE `answers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `answer` varchar(255), `created_on` date) ENGINE=InnoDB
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (82.2ms)[0m  CREATE TABLE `application_states` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `state` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (81.4ms)[0m  CREATE TABLE `attended_schools` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (82.8ms)[0m  CREATE TABLE `generalAnswers` (`answer` varchar(1000)) ENGINE=InnoDB
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (81.9ms)[0m  CREATE TABLE `general_questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (81.3ms)[0m  CREATE TABLE `people` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `is_applicant` tinyint(1), `is_employee` tinyint(1), `first_name` varchar(255), `middle_name` varchar(255), `last_name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.8ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (81.6ms)[0m  CREATE TABLE `position_specific_answers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `answer` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (91.1ms)[0m  CREATE TABLE `position_specific_questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.9ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (89.3ms)[0m  CREATE TABLE `positions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `description` varchar(255), `department` varchar(255), `location` varchar(255), `is_open` tinyint(1), `created_on` date, `updated_on` date) ENGINE=InnoDB
+  [1m[36mSQL (0.9ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (102.4ms)[0m  CREATE TABLE `previousEmployers` (`pk` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `employer` varchar(255), `supervisor` varchar(255), `position` varchar(255), `reasonForLeaving` varchar(255), `responsibilities` varchar(255), `startDate` date, `endDate` date, `beginningSalary` decimal(10,2), `endingSalary` decimal(10,2)) ENGINE=InnoDB
+  [1m[36mSQL (0.9ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (69.0ms)[0m  CREATE TABLE `questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question` varchar(255), `created_on` date, `modified_on` date) ENGINE=InnoDB
+  [1m[36mSQL (1.3ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (90.0ms)[0m  CREATE TABLE `schools` (`pk` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(50)) ENGINE=InnoDB
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (81.5ms)[0m  CREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB
+  [1m[36mSQL (0.8ms)[0m  [1mSHOW KEYS FROM `schema_migrations`[0m
+  [1m[35mSQL (106.4ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36mSQL (0.8ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT version FROM `schema_migrations`
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20110411012833')[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20110306213601')
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20110306213624')[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20110306213655')
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20110306213716')[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20110306223224')
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20110309035339')[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20110311164542')
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20110409043730')[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20110410023203')
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `schema_migrations` (version) VALUES ('20110411011537')[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO `schema_migrations` (version) VALUES ('20110411012815')
+  [1m[36mSQL (0.7ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (2.7ms)[0m  [1mdescribe `positions`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `positions` (`title`, `description`, `department`, `location`, `is_open`, `created_on`, `updated_on`) VALUES ('Associate Wrangler', 'Wrangler of various livestock', 'Livestock', 'The Pig Emporium and TV warehouse', 1, '2011-04-11 01:36:13', '2011-04-11 01:36:13')
+  [1m[36mSQL (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `positions` (`title`, `description`, `department`, `location`, `is_open`, `created_on`, `updated_on`) VALUES ('Head Wrangler', 'Only the most experienced wranglers are entitled to this position', 'Livestock', 'The Pig Emporium and TV warehouse', 0, '2011-04-11 01:36:13', '2011-04-11 01:36:13')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `positions` (`title`, `description`, `department`, `location`, `is_open`, `created_on`, `updated_on`) VALUES ('Associate Cashier', 'handles customer facing operations and cash handling activities.', 'Front End', 'The Pig Emporium and TV warehouse', 1, '2011-04-11 01:36:13', '2011-04-11 01:36:13')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `positions` (`title`, `description`, `department`, `location`, `is_open`, `created_on`, `updated_on`) VALUES ('Head Cashier', 'ensures day to day operations are carried out effectively.', 'Front End', 'The Pig Emporium and TV warehouse', 1, '2011-04-11 01:36:13', '2011-04-11 01:36:13')[0m
+  [1m[35mSQL (26.4ms)[0m  COMMIT
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `positions` (`title`, `description`, `department`, `location`, `is_open`, `created_on`, `updated_on`) VALUES ('TV Specialist', 'handles customer facing activities related to TV sales and promotions.', 'Electronics', 'The Pig Emporium and TV warehouse', 1, '2011-04-11 01:36:13', '2011-04-11 01:36:13')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
