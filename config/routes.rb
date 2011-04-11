@@ -17,18 +17,18 @@ IHireApplicant::Application.routes.draw do |map|
   
   get "job_questions/index"
 
-  get "job_questions/results"    
-  match "/positions_search/index" => "positions_search#index"
-  get "positions_search/index"
+  get "job_questions/results"
   
-  get "positions_search/results"
-
-  get "positions_search/detail"
+  match "/positions_search/index" => "positions_search#index"
+  
+  get "positions_search/index"
   
   get "questions_admin/index"
 
   match "positions_search" => "positions_search#index"
     
+  get "job_application/index"
+  
   #match "questions/new" => "Admin::Questions#new"
   #match "questions/:id" => "Admin::Questions#show"
   #match "questions/:id/edit" => "Admin::Questions#edit"

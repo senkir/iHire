@@ -7,11 +7,11 @@ gem 'rails', '3.0.5'
 
 #database driver
 gem 'mysql2'
-#handles wizard operations
+#wizard operations
 gem 'aasm'
-#handles authentication
+#authentication
 gem 'devise'
-#handles a lot of standard form activities
+#standard form activities
 gem 'formtastic'
 
 # Use unicorn as the web server
