@@ -24115,3 +24115,48 @@ AASM::InvalidTransition (Event 'next' cannot transition from 'in_review'):
 Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
 Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (140.2ms)
 Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (146.7ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:19:26 -0700
+  Processing by JobApplicationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  describe `application_states`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-09 07:19:26', '2011-04-09 07:19:26')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Completed   in 152ms
+
+NoMethodError (undefined method `name_for_state' for #<JobApplicationsController:0x00000103287658>):
+  app/controllers/job_applications_controller.rb:11:in `index'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (132.9ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (140.8ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-09 00:21:02 -0700
+  Processing by JobApplicationsController#index as HTML
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  describe `application_states`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-09 07:21:02', '2011-04-09 07:21:02')[0m
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+Rendered job_applications/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 354ms (Views: 11.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/job_applications/next?id=22" for 127.0.0.1 at 2011-04-09 00:21:08 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mApplicationState Load (0.3ms)[0m  [1mSELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 22 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE `application_states` SET `state` = 'general_questions', `updated_at` = '2011-04-09 07:21:08' WHERE `application_states`.`id` = 22[0m
+  [1m[35mSQL (0.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/job_applications/index?id=22
+Completed 302 Found in 53ms
+
+
+Started GET "/job_applications/index?id=22" for 127.0.0.1 at 2011-04-09 00:21:09 -0700
+  Processing by JobApplicationsController#index as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mApplicationState Load (0.4ms)[0m  [1mSELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 22 LIMIT 1[0m
+Rendered job_applications/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 46ms (Views: 12.4ms | ActiveRecord: 2.0ms)

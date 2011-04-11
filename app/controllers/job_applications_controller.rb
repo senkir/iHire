@@ -1,6 +1,6 @@
 class JobApplicationsController < ApplicationController  
   include AASM
-  
+  include JobApplicationsHelper
     def index
       if params[:id]
         @application_state = ApplicationState.find(params[:id])
@@ -8,6 +8,7 @@ class JobApplicationsController < ApplicationController
       @application_state = ApplicationState.new
       @application_state.save
       end
+      @page_title = name_for_state(@application_state)
     end
     
     #transition to the next state
