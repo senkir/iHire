@@ -24394,3 +24394,152 @@ Migrating to CreatePeople (20110410023203)
   [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `questions`
   [1m[36mSQL (1.8ms)[0m  [1mdescribe `schools`[0m
   [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `schools`
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-10 17:22:10 -0700
+  Processing by PositionsSearchController#index as HTML
+  [1m[36mPosition Load (2.2ms)[0m  [1mSELECT DISTINCT(location) FROM `positions` ORDER BY updated_on[0m
+  [1m[35mPosition Load (12.8ms)[0m  SELECT DISTINCT(department) FROM `positions` ORDER BY updated_on
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb__2686478817341367610_2174344220__834287231986428066 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb__2686478817341367610_2174344220__834287231986428066 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (170.6ms)
+Rendered positions_search/index.html.erb within layouts/application (180.5ms)
+Completed 200 OK in 189ms (Views: 173.4ms | ActiveRecord: 15.0ms)
+
+
+Started POST "/positions_search/index" for 127.0.0.1 at 2011-04-10 17:22:13 -0700
+  Processing by PositionsSearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6DuSsl/EaGrqKkcHhDHh8GKK1RoLb8aN1qY2sZ/MzMw=", "position"=>{"title"=>"", "location"=>"", "department"=>""}, "commit"=>"Submit"}
+  [1m[36mPosition Load (8.9ms)[0m  [1mSELECT DISTINCT(location) FROM `positions` ORDER BY updated_on[0m
+  [1m[35mPosition Load (2.5ms)[0m  SELECT DISTINCT(department) FROM `positions` ORDER BY updated_on
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb__2686478817341367610_2174933080__834287231986428066 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb__2686478817341367610_2174933080__834287231986428066 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (42.1ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)
+  [1m[36mPosition Load (0.3ms)[0m  [1mSELECT `positions`.* FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1) ORDER BY updated_on[0m
+Rendered positions_search/_result.html.erb (1.4ms)
+Rendered positions_search/_result.html.erb (1.1ms)
+Rendered positions_search/_result.html.erb (1.0ms)
+Rendered positions_search/_result.html.erb (0.9ms)
+Rendered positions_search/index.html.erb within layouts/application (58.9ms)
+Completed 200 OK in 66ms (Views: 53.0ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/job_applications/index" for 127.0.0.1 at 2011-04-10 17:22:19 -0700
+  Processing by JobApplicationsController#index as HTML
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (51.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (19.8ms)[0m  describe `application_states`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-11 00:22:19', '2011-04-11 00:22:19')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Rendered job_applications/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 223ms (Views: 33.4ms | ActiveRecord: 71.7ms)
+
+
+Started GET "/general_questions" for 127.0.0.1 at 2011-04-10 17:22:21 -0700
+  Processing by GeneralQuestionsController#index as HTML
+  [1m[36mGeneralQuestion Load (0.4ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+Rendered general_questions/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 19ms (Views: 9.7ms | ActiveRecord: 0.4ms)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+  [1m[36mSQL (6.1ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateAddresses (20110306213601)
+Migrating to CreateSchools (20110306213624)
+Migrating to CreateGeneralAnswers (20110306213655)
+Migrating to CreatePreviousEmployers (20110306213716)
+Migrating to CreatePositions (20110306223224)
+Migrating to CreateAnswers (20110309035339)
+Migrating to CreateGeneralQuestions (20110311164542)
+Migrating to CreateApplicationStates (20110409043730)
+Migrating to CreatePeople (20110410023203)
+Migrating to CreateAttendedSchools (20110411011537)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+  [1m[36mSQL (0.5ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateAddresses (20110306213601)
+Migrating to CreateSchools (20110306213624)
+Migrating to CreateGeneralAnswers (20110306213655)
+Migrating to CreatePreviousEmployers (20110306213716)
+Migrating to CreatePositions (20110306223224)
+Migrating to CreateAnswers (20110309035339)
+Migrating to CreateGeneralQuestions (20110311164542)
+Migrating to CreateApplicationStates (20110409043730)
+Migrating to CreatePeople (20110410023203)
+Migrating to CreateAttendedSchools (20110411011537)
+  [1m[35mSQL (55.8ms)[0m  CREATE TABLE `attended_schools` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110411011537')[0m
+Migrating to CreatePositionSpecificQuestions (20110411012815)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.4ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateAddresses (20110306213601)
+Migrating to CreateSchools (20110306213624)
+Migrating to CreateGeneralAnswers (20110306213655)
+Migrating to CreatePreviousEmployers (20110306213716)
+Migrating to CreatePositions (20110306223224)
+Migrating to CreateAnswers (20110309035339)
+Migrating to CreateGeneralQuestions (20110311164542)
+Migrating to CreateApplicationStates (20110409043730)
+Migrating to CreatePeople (20110410023203)
+Migrating to CreateAttendedSchools (20110411011537)
+Migrating to CreatePositionSpecificQuestions (20110411012815)
+  [1m[35mSQL (57.6ms)[0m  CREATE TABLE `position_specific_questions` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `question` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110411012815')[0m
+Migrating to CreatePositionSpecificAnswers (20110411012833)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+  [1m[36mSQL (0.6ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateAddresses (20110306213601)
+Migrating to CreateSchools (20110306213624)
+Migrating to CreateGeneralAnswers (20110306213655)
+Migrating to CreatePreviousEmployers (20110306213716)
+Migrating to CreatePositions (20110306223224)
+Migrating to CreateAnswers (20110309035339)
+Migrating to CreateGeneralQuestions (20110311164542)
+Migrating to CreateApplicationStates (20110409043730)
+Migrating to CreatePeople (20110410023203)
+Migrating to CreateAttendedSchools (20110411011537)
+Migrating to CreatePositionSpecificQuestions (20110411012815)
+Migrating to CreatePositionSpecificAnswers (20110411012833)
+  [1m[35mSQL (81.5ms)[0m  CREATE TABLE `position_specific_answers` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `answer` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20110411012833')[0m
+  [1m[35mSQL (0.7ms)[0m  SHOW TABLES
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW TABLES
+  [1m[36mSQL (2.1ms)[0m  [1mdescribe `addresses`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `addresses`
+  [1m[36mSQL (2.6ms)[0m  [1mdescribe `answers`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `answers`
+  [1m[36mSQL (1.9ms)[0m  [1mdescribe `application_states`[0m
+  [1m[35mSQL (1.0ms)[0m  SHOW KEYS FROM `application_states`
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `attended_schools`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `attended_schools`
+  [1m[36mSQL (2.1ms)[0m  [1mdescribe `generalAnswers`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `generalAnswers`
+  [1m[36mSQL (1.9ms)[0m  [1mdescribe `general_questions`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `general_questions`
+  [1m[36mSQL (2.4ms)[0m  [1mdescribe `people`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `people`
+  [1m[36mSQL (1.8ms)[0m  [1mdescribe `position_specific_answers`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `position_specific_answers`
+  [1m[36mSQL (2.0ms)[0m  [1mdescribe `position_specific_questions`[0m
+  [1m[35mSQL (0.6ms)[0m  SHOW KEYS FROM `position_specific_questions`
+  [1m[36mSQL (2.0ms)[0m  [1mdescribe `positions`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `positions`
+  [1m[36mSQL (2.4ms)[0m  [1mdescribe `previousEmployers`[0m
+  [1m[35mSQL (0.3ms)[0m  SHOW KEYS FROM `previousEmployers`
+  [1m[36mSQL (1.9ms)[0m  [1mdescribe `questions`[0m
+  [1m[35mSQL (0.5ms)[0m  SHOW KEYS FROM `questions`
+  [1m[36mSQL (1.7ms)[0m  [1mdescribe `schools`[0m
+  [1m[35mSQL (0.2ms)[0m  SHOW KEYS FROM `schools`

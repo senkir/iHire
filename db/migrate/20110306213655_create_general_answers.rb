@@ -1,10 +1,10 @@
 class CreateGeneralAnswers < ActiveRecord::Migration
   def self.up
-    create_table :generalAnswers, :id => false, :force => true do |t|
-      t.string :answer, :limit => 1000
+    create_table :general_answers do |t|
+      t.string :answer
     end
   end
   def self.down
-    drop table :generalAnswers
+    drop table :general_answers
   end
 end

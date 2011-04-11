@@ -1,13 +1,13 @@
 class ApplicationState < ActiveRecord::Base
     include AASM    
-    belongs_to :person
+    has_one :person
   
     aasm_column :state
     aasm_initial_state :new_applicant
     
     aasm_state :new_applicant
     aasm_state :general_questions
-    aasm_state :job_specific_questions
+    aasm_state :position_specific_questions
     aasm_state :personal_information
     aasm_state :in_review
     aasm_state :application_rejected
@@ -15,8 +15,8 @@ class ApplicationState < ActiveRecord::Base
     
     aasm_event :next do
       transitions :to => :general_questions, :from => [:new_applicant]
-      transitions :to => :job_specific_questions, :from => [:general_questions]
-      transitions :to => :personal_information, :from => [:job_specific_questions]
+      transitions :to => :position_specific_questions, :from => [:general_questions]
+      transitions :to => :personal_information, :from => [:position_specific_questions]
       transitions :to => :in_review, :from => [:personal_information]
       transitions :to => :application_complete
     end
@@ -30,6 +30,6 @@ class ApplicationState < ActiveRecord::Base
     end
     
     aasm_event :reject do
-      transitions :to => :application_rejected, :from => [:new_applicant, :general_questions, :job_specific_questions]
+      transitions :to => :application_rejected, :from => [:new_applicant, :general_questions, :position_specific_questions]
     end
 end

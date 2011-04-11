@@ -1,11 +1,11 @@
 class CreateAddresses < ActiveRecord::Migration
   def self.up
     create_table :addresses do |t|
-      t.string :street, :limit => 50
-      t.string :city,   :limit => 50
-      t.string :state, :limit => 50
-      t.string :zip,    :limit => 50
-      t.string :phone,  :limit => 50
+      t.string :street
+      t.string :city
+      t.string :state
+      t.string :zip
+      t.string :phone
     end
   end
   def self.down
