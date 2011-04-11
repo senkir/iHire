@@ -4,5 +4,5 @@
   <li><%=raw position.description %></li>
    <li><%= position.location %></li>
    <li><%= position.department %></li>
-   <%= link_to "Apply", job_applications_index_path %>
+  <%= link_to "Apply", job_applications_index_path, { :method => 'POST', :position => position.id }%>
 </ul>

@@ -3,23 +3,42 @@
 class JobApplicationsController < ApplicationController  
   include AASM
   include JobApplicationsHelper
-    def index #default controller
+  def index
+      
+      if !params[:position]
+        redirect_to positions_search_path        
+      end
       if params[:state]
         @application_state = ApplicationState.find(params[:state])
       else
+              
+      #the application process is starting, so do some intial setup to get things going.
+      @applicant = Person.new
+      @applicant.position
       @application_state = ApplicationState.new
+      @applicant.application_state = @application_state
+      @applicant.position = params[:position]
+      @applicant.save
       @application_state.save
       end
-      @page_title = name_for_state(@application_state)
+      @page_title = name_for_state(@application_state)      
     end
     
     #transition to the next state
     def next
-      @application_state = ApplicationState.find(params[:state])      
+      @applicant = Person.find(params[:applicant])
+      @application_state = ApplicationState.application_state      
       @application_state.next
       @application_state.save
       #redirect based on state
       #for now this redirects to index page
+      if @application_state.general_questions?
+        redirect_to general_questions_path( :applicant => params[:applicant])
+      end
+      if @application_state.position_specific_questions?
+        redirect_to position_specific_questions-path ( :applicant => params[:applicant])
+      end
+      
       redirect_to(:action => "index", :state => params[:state] )
     end
 end

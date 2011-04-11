@@ -12,12 +12,15 @@
 
 ActiveRecord::Schema.define(:version => 20110411012833) do
 
-  create_table "addresses", :primary_key => "pk", :force => true do |t|
-    t.string "street", :limit => 50
-    t.string "city",   :limit => 50
-    t.string "state",  :limit => 50
-    t.string "zip",    :limit => 50
-    t.string "phone",  :limit => 50
+  create_table "addresses", :force => true do |t|
+    t.string  "street"
+    t.string  "city"
+    t.string  "state"
+    t.string  "zip"
+    t.string  "phone"
+    t.integer "person_id"
+    t.integer "school_id"
+    t.integer "previous_employer_id"
   end
 
   create_table "answers", :force => true do |t|
@@ -38,8 +41,10 @@ ActiveRecord::Schema.define(:version => 20110411012833) do
     t.datetime "updated_at"
   end
 
-  create_table "generalAnswers", :id => false, :force => true do |t|
-    t.string "answer", :limit => 1000
+  create_table "general_answers", :force => true do |t|
+    t.string  "answer"
+    t.integer "person_id"
+    t.integer "general_question_id"
   end
 
   create_table "general_questions", :force => true do |t|
@@ -49,23 +54,28 @@ ActiveRecord::Schema.define(:version => 20110411012833) do
   end
 
   create_table "people", :force => true do |t|
-    t.boolean  "is_applicant"
-    t.boolean  "is_employee"
+    t.boolean  "is_applicant",         :default => true
+    t.boolean  "is_employee",          :default => false
     t.string   "first_name"
     t.string   "middle_name"
     t.string   "last_name"
+    t.integer  "position_id"
+    t.integer  "application_state_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "position_specific_answers", :force => true do |t|
     t.string   "answer"
+    t.string   "person_id"
+    t.string   "position_specific_question_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "position_specific_questions", :force => true do |t|
     t.string   "question"
+    t.string   "position_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -80,26 +90,22 @@ ActiveRecord::Schema.define(:version => 20110411012833) do
     t.date    "updated_on"
   end
 
-  create_table "previousEmployers", :primary_key => "pk", :force => true do |t|
+  create_table "previous_employers", :force => true do |t|
     t.string  "employer"
     t.string  "supervisor"
     t.string  "position"
-    t.string  "reasonForLeaving"
+    t.string  "reason_for_leaving"
     t.string  "responsibilities"
-    t.date    "startDate"
-    t.date    "endDate"
-    t.decimal "beginningSalary",  :precision => 10, :scale => 2
-    t.decimal "endingSalary",     :precision => 10, :scale => 2
+    t.date    "start_date"
+    t.date    "end_date"
+    t.decimal "beginning_salary",   :precision => 10, :scale => 2
+    t.decimal "ending_salary",      :precision => 10, :scale => 2
+    t.integer "person_id"
   end
 
-  create_table "questions", :force => true do |t|
-    t.string "question"
-    t.date   "created_on"
-    t.date   "modified_on"
-  end
-
-  create_table "schools", :primary_key => "pk", :force => true do |t|
-    t.string "name", :limit => 50
+  create_table "schools", :force => true do |t|
+    t.string "name"
+    t.string "limit"
   end
 
 end

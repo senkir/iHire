@@ -5,7 +5,8 @@ IHireApplicant::Application.routes.draw do |map|
       resources :questions, :answers, :positions
   end
   
-  
+  # match ':controller(/:action(/:id(.:format)))'
+
   
   #match 'Admin::Questions' => 'Admin::Questions#index'
   #match 'questions/:id' => 'Admin::Questions#show'
@@ -19,18 +20,21 @@ IHireApplicant::Application.routes.draw do |map|
 
   get "job_questions/results"
   
+  #search controllers
   match "/positions_search/index" => "positions_search#index"
   
   get "positions_search/index"
-  
-  get "questions_admin/index"
-
+    
   match "positions_search" => "positions_search#index"
     
+  get "questions_admin/index"
+
+  #application navigation controller
   match "/job_applications/index" => "job_applications#index"
   
   match "/job_applications/next" => "job_applications#next"
   
+  #CRUD for quesitons
   #match "questions/new" => "Admin::Questions#new"
   #match "questions/:id" => "Admin::Questions#show"
   #match "questions/:id/edit" => "Admin::Questions#edit"

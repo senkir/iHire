@@ -2,6 +2,7 @@ class CreatePositionSpecificQuestions < ActiveRecord::Migration
   def self.up
     create_table :position_specific_questions do |t|
       t.string :question
+      t.string :position_id, :null => 'false'
 
       t.timestamps
     end

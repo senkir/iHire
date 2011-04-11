@@ -10,6 +10,7 @@ class CreatePreviousEmployers < ActiveRecord::Migration
       t.date    :end_date
       t.decimal :beginning_salary, :precision => 10, :scale => 2
       t.decimal :ending_salary,    :precision => 10, :scale => 2
+      t.integer :person_id, :null => 'false'
     end
   end
   def self.down

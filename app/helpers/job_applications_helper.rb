@@ -8,8 +8,8 @@ module JobApplicationsHelper
     if state.general_questions?
       @name = "General Questions"
     end
-    if state.job_specific_questions?
-      @name = "Job Specific Questions"
+    if state.position_specific_questions?
+      @name = "Position Specific Questions"
     end
     if state.personal_information?
       @name = "Personal Information"

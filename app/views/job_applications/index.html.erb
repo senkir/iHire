@@ -1,4 +1,4 @@
 Hello New applicant!  <br/>
 <br/>
 The application process is about to start.<br/>
-<%= link_to 'begin survey questions', general_questions_path, { :action => "next", :state => @application_state.id } %>
+<%= link_to 'begin survey questions', general_questions_path, { :action => "next", :applicant => @person.id } %>
