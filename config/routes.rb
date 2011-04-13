@@ -34,6 +34,7 @@ IHireApplicant::Application.routes.draw do |map|
   
   match "/job_applications/next" => "job_applications#next"
   
+  match "/job_applications/complete" => "job_applications#complete"
   #CRUD for quesitons
   #match "questions/new" => "Admin::Questions#new"
   #match "questions/:id" => "Admin::Questions#show"

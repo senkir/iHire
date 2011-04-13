@@ -17,6 +17,7 @@ class JobApplicationsController < ApplicationController
       @applicant.save
 #     @applicant.application_state = @application_state
       @applicant.build_application_state
+      @applicant.save
        @applicant.position = Position.find(params[:position])
       end
       @page_title = name_for_state(@applicant.application_state)      
@@ -25,18 +26,26 @@ class JobApplicationsController < ApplicationController
     #transition to the next state
     def next
       @applicant = Person.find(params[:applicant])
-      @application_state = ApplicationState.application_state      
-      @application_state.next
-      @application_state.save
+      @state = @applicant.application_state
+      @state.next
+     # @application.save
       #redirect based on state
       #for now this redirects to index page
-      if @application_state.general_questions?
+      if @state.general_questions?
         redirect_to general_questions_path( :applicant => params[:applicant])
       end
-      if @application_state.position_specific_questions?
-        redirect_to position_specific_questions-path, {:applicant => params[:applicant]} 
+      if @state.position_specific_questions?
+        redirect_to position_specific_questions_path(:applicant => params[:applicant]) 
       end
-      
-      redirect_to(:action => "index", :state => params[:state] )
+      if @state.personal_information?
+        redirect_to personal_information_path(:applicant => params[:applicant])
+      end
+      if @state.application_complete?
+        redirect_to job_applications_complete_path (:applicant => params[:applicant])
+      end
+    end
+    
+    def complete
+      @applicant = Person.find(params[:applicant])
     end
 end
