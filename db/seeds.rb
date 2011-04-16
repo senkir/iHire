@@ -15,7 +15,9 @@ Position.create(:title => 'Head Cashier', :description => 'ensures day to day op
 Position.create(:title => 'TV Specialist', :description => 'handles customer facing activities related to TV sales and promotions.', :department => 'Electronics', :location =>'The Pig Emporium and TV warehouse', :is_open => '1')
 
 #some initial general questions
-GeneralQuestion.create(:question => 'Are you over 18?')
 
+#question types are: yes_or_no, , multiple_choice, multi_select, text_box
+GeneralQuestion.create(:question => 'Are you over 18?', :question_type => 'yes_or_no')
+GeneralQuestion.create(:question => 'Are you eligible to work in the state of Texas?', :question_type => 'yes_or_no')
 #some intial job specific questions
 #TODO think of some

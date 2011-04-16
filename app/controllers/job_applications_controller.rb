@@ -3,28 +3,29 @@
 class JobApplicationsController < ApplicationController  
   include AASM
   include JobApplicationsHelper
+  
   def index
-      
-      if !params[:position]
-        redirect_to positions_search_path        
-      end
-      if params[:state]
-        @application_state = ApplicationState.find(params[:state])
-      else
+    @page_title = "General Questions"
+    if !params[:position]
+      redirect_to positions_search_path        
+    end
+    if params[:state]
+      @application_state = ApplicationState.find(params[:state])
+    else
               
-      #the application process is starting, so do some intial setup to get things going.
+    #the application process is starting, so do some intial setup to get things going.
       @applicant = Person.new
       @applicant.save
-#     @applicant.application_state = @application_state
+    #@applicant.application_state = @application_state
       @applicant.build_application_state
       @applicant.save
-       @applicant.position = Position.find(params[:position])
-      end
-      @page_title = name_for_state(@applicant.application_state)      
+     @applicant.position = Position.find(params[:position])
     end
+    @page_title = name_for_state(@applicant.application_state)      
+  end
     
     #transition to the next state
-    def next
+  def next
       @applicant = Person.find(params[:applicant])
       @state = @applicant.application_state
       @state.next
@@ -43,9 +44,9 @@ class JobApplicationsController < ApplicationController
       if @state.application_complete?
         redirect_to job_applications_complete_path(:applicant => params[:applicant])
       end
-    end
-    
-    def complete
-      @applicant = Person.find(params[:applicant])
-    end
+  end
+  
+  def complete
+    @applicant = Person.find(params[:applicant])
+  end
 end

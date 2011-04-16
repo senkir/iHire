@@ -12,8 +12,8 @@ class GeneralQuestionsController < ApplicationController
   end
 
   def results
-    @question = Question.find(1)
-    @answer = Answer.find(params[:id])
+    @question = GeneralQuestion.find(1)
+    @answer = GeneralAnswer.find(params[:id])
   end
 
   def create
