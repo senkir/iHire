@@ -1,9 +1,9 @@
-class JGeneralQuestionsController < ApplicationController
+class GeneralQuestionsController < ApplicationController
   def index
     @applicant = Person.find(params[:applicant])
     @title = "Application General Questions"
-    @question = Question.find(1) 
-    @answer = Answer.new    
+    @question = GeneralQuestion.all
+    @answer = GeneralAnswer.new    
     
     respond_to do |format|
       format.html #index.html.erb

@@ -41,7 +41,7 @@ class JobApplicationsController < ApplicationController
         redirect_to personal_information_path(:applicant => params[:applicant])
       end
       if @state.application_complete?
-        redirect_to job_applications_complete_path (:applicant => params[:applicant])
+        redirect_to job_applications_complete_path(:applicant => params[:applicant])
       end
     end
     
