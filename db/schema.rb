@@ -23,12 +23,6 @@ ActiveRecord::Schema.define(:version => 20110411012833) do
     t.integer "previous_employer_id"
   end
 
-  create_table "answers", :force => true do |t|
-    t.string "name"
-    t.string "answer"
-    t.date   "created_on"
-  end
-
   create_table "application_states", :force => true do |t|
     t.string   "state"
     t.datetime "created_at"
@@ -49,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20110411012833) do
 
   create_table "general_questions", :force => true do |t|
     t.string   "question"
+    t.string   "question_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
