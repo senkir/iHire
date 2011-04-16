@@ -1,6 +1,7 @@
 class Person < ActiveRecord::Base
   has_many :previous_employers
-  has_many :answers
+  has_many :general_answers
+  has_many :position_specific_answers
   has_one :address
   belongs_to :application_state #fk - application_state_id
   belongs_to :position  #fk - position_id

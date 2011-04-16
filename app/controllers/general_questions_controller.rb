@@ -1,9 +1,11 @@
 class GeneralQuestionsController < ApplicationController
+  include GeneralQuestionsHelper
+  
   def index
     @applicant = Person.find(params[:applicant])
-    @title = "Application General Questions"
-    @question = GeneralQuestion.all
-    @answer = GeneralAnswer.new    
+    @page_title = "Application General Questions"
+    build_all_answers @applicant
+    @questions = GeneralQuestion.all
     
     respond_to do |format|
       format.html #index.html.erb
@@ -32,3 +34,19 @@ class GeneralQuestionsController < ApplicationController
   end
   
 end
+
+=begin
+  Saved in case i need it later:
+
+    <% if @answer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@answer.errors.count, "error") %> prohibited this answer from being saved:</h2>
+
+      <ul>
+      <% @answer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+=end

@@ -29635,3 +29635,236 @@ DEPRECATION WARNING: You are using the old router DSL which will be removed in R
   [1m[35mSQL (0.1ms)[0m  BEGIN
   [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `general_questions` (`question`, `question_type`, `created_at`, `updated_at`) VALUES ('Are you eligible to work in the state of Texas?', 'yes_or_no', '2011-04-16 18:31:45', '2011-04-16 18:31:45')[0m
   [1m[35mSQL (17.2ms)[0m  COMMIT
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+
+
+Started GET "/general_questions?applicant=29" for 127.0.0.1 at 2011-04-16 11:49:08 -0700
+
+SyntaxError (/Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/helpers/general_questions_helper.rb:6: syntax error, unexpected '\n', expecting tCOLON2 or '[' or '.'):
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/general_questions_controller.rb:1:in `<top (required)>'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (24.6ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.8ms)
+
+
+Started GET "/general_questions?applicant=29" for 127.0.0.1 at 2011-04-16 11:50:29 -0700
+  Processing by GeneralQuestionsController#index as HTML
+  Parameters: {"applicant"=>"29"}
+  [1m[36mSQL (1.0ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 29 LIMIT 1
+Completed   in 144ms
+
+ActiveRecord::RecordNotFound (Couldn't find Person with ID=29):
+  app/controllers/general_questions_controller.rb:3:in `index'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (126.9ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (133.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-16 11:50:37 -0700
+  Processing by PositionsSearchController#index as HTML
+  [1m[36mPosition Load (2.1ms)[0m  [1mSELECT DISTINCT(location) FROM `positions` ORDER BY updated_on[0m
+  [1m[35mPosition Load (2.1ms)[0m  SELECT DISTINCT(department) FROM `positions` ORDER BY updated_on
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb__2522657610978033317_2155810500_2792579264153299461 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb__2522657610978033317_2155810500_2792579264153299461 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (72.2ms)
+Rendered positions_search/index.html.erb within layouts/application (76.2ms)
+Completed 200 OK in 84ms (Views: 79.0ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/positions_search/index" for 127.0.0.1 at 2011-04-16 11:50:40 -0700
+  Processing by PositionsSearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mSYy2ruqSX1TBCPtYubvbycvp/C2X0zPPnH10U4D++c=", "position"=>{"title"=>"", "location"=>"", "department"=>""}, "commit"=>"Submit"}
+  [1m[36mPosition Load (2.2ms)[0m  [1mSELECT DISTINCT(location) FROM `positions` ORDER BY updated_on[0m
+  [1m[35mPosition Load (9.7ms)[0m  SELECT DISTINCT(department) FROM `positions` ORDER BY updated_on
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb__2522657610978033317_2161902060_2792579264153299461 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb__2522657610978033317_2161902060_2792579264153299461 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (44.6ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)
+  [1m[36mPosition Load (0.4ms)[0m  [1mSELECT `positions`.* FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1) ORDER BY updated_on[0m
+Rendered positions_search/_result.html.erb (1.5ms)
+Rendered positions_search/_result.html.erb (1.1ms)
+Rendered positions_search/_result.html.erb (1.1ms)
+Rendered positions_search/_result.html.erb (1.0ms)
+Rendered positions_search/index.html.erb within layouts/application (61.5ms)
+Completed 200 OK in 68ms (Views: 55.1ms | ActiveRecord: 12.7ms)
+
+
+Started POST "/job_applications/index?position=1" for 127.0.0.1 at 2011-04-16 11:50:42 -0700
+  Processing by JobApplicationsController#index as HTML
+  Parameters: {"authenticity_token"=>"mSYy2ruqSX1TBCPtYubvbycvp/C2X0zPPnH10U4D++c=", "position"=>"1"}
+  [1m[35mSQL (0.4ms)[0m  BEGIN
+  [1m[36mSQL (2.4ms)[0m  [1mdescribe `people`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `people` (`is_applicant`, `is_employee`, `first_name`, `middle_name`, `last_name`, `position_id`, `application_state_id`, `created_at`, `updated_at`) VALUES (1, 0, NULL, NULL, NULL, NULL, NULL, '2011-04-16 18:50:42', '2011-04-16 18:50:42')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (10.4ms)[0m  [1mdescribe `application_states`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-16 18:50:42', '2011-04-16 18:50:42')
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE `people` SET `application_state_id` = 1, `updated_at` = '2011-04-16 18:50:42' WHERE `people`.`id` = 1[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mPosition Load (0.4ms)[0m  [1mSELECT `positions`.* FROM `positions` WHERE `positions`.`id` = 1 ORDER BY updated_on LIMIT 1[0m
+Rendered job_applications/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 232ms (Views: 10.3ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/job_applications/next?applicant=1" for 127.0.0.1 at 2011-04-16 11:50:44 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"applicant"=>"1"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 1 LIMIT 1
+  [1m[36mApplicationState Load (0.3ms)[0m  [1mSELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 1 LIMIT 1[0m
+Redirected to http://localhost:3000/general_questions?applicant=1
+Completed 302 Found in 92ms
+
+
+Started GET "/general_questions?applicant=1" for 127.0.0.1 at 2011-04-16 11:50:44 -0700
+  Processing by GeneralQuestionsController#index as HTML
+  Parameters: {"applicant"=>"1"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 1 LIMIT 1
+Completed   in 112ms
+
+NoMethodError (undefined method `build_all_answers' for #<GeneralQuestionsController:0x00000100c96160>):
+  app/controllers/general_questions_controller.rb:5:in `index'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (31.7ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (96.7ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (133.4ms)
+
+
+Started GET "/general_questions?applicant=1" for 127.0.0.1 at 2011-04-16 11:51:11 -0700
+
+TypeError (wrong argument type String (expected Module)):
+  app/controllers/general_questions_controller.rb:2:in `include'
+  app/controllers/general_questions_controller.rb:2:in `<class:GeneralQuestionsController>'
+  app/controllers/general_questions_controller.rb:1:in `<top (required)>'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (31.7ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (18.4ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (54.9ms)
+
+
+Started GET "/general_questions?applicant=1" for 127.0.0.1 at 2011-04-16 11:51:30 -0700
+
+TypeError (wrong argument type String (expected Module)):
+  app/controllers/general_questions_controller.rb:2:in `include'
+  app/controllers/general_questions_controller.rb:2:in `<class:GeneralQuestionsController>'
+  app/controllers/general_questions_controller.rb:1:in `<top (required)>'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (17.8ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (54.6ms)
+
+
+Started GET "/general_questions?applicant=1" for 127.0.0.1 at 2011-04-16 11:51:43 -0700
+  Processing by GeneralQuestionsController#index as HTML
+  Parameters: {"applicant"=>"1"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT `people`.* FROM `people` WHERE `people`.`id` = 1 LIMIT 1[0m
+  [1m[35mGeneralQuestion Load (0.4ms)[0m  SELECT `general_questions`.* FROM `general_questions`
+Completed   in 75ms
+
+NoMethodError (undefined method `general_answer' for #<Person:0x00000100e5e498>):
+  app/helpers/general_questions_helper.rb:5:in `block in build_all_answers'
+  app/helpers/general_questions_helper.rb:4:in `each'
+  app/helpers/general_questions_helper.rb:4:in `build_all_answers'
+  app/controllers/general_questions_controller.rb:7:in `index'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (138.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (145.3ms)
+
+
+Started GET "/general_questions?applicant=1" for 127.0.0.1 at 2011-04-16 11:52:22 -0700
+  Processing by GeneralQuestionsController#index as HTML
+  Parameters: {"applicant"=>"1"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT `people`.* FROM `people` WHERE `people`.`id` = 1 LIMIT 1[0m
+  [1m[35mGeneralQuestion Load (0.4ms)[0m  SELECT `general_questions`.* FROM `general_questions`
+Completed   in 71ms
+
+NoMethodError (undefined method `generalAnswer' for #<Person:0x00000100e4f218>):
+  app/helpers/general_questions_helper.rb:5:in `block in build_all_answers'
+  app/helpers/general_questions_helper.rb:4:in `each'
+  app/helpers/general_questions_helper.rb:4:in `build_all_answers'
+  app/controllers/general_questions_controller.rb:7:in `index'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (103.0ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (109.2ms)
+
+
+Started GET "/general_questions?applicant=1" for 127.0.0.1 at 2011-04-16 11:52:50 -0700
+  Processing by GeneralQuestionsController#index as HTML
+  Parameters: {"applicant"=>"1"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT `people`.* FROM `people` WHERE `people`.`id` = 1 LIMIT 1[0m
+  [1m[35mGeneralQuestion Load (0.4ms)[0m  SELECT `general_questions`.* FROM `general_questions`
+Completed   in 142ms
+
+NoMethodError (undefined method `build_general_answer' for #<Person:0x00000101cd8960>):
+  app/helpers/general_questions_helper.rb:5:in `block in build_all_answers'
+  app/helpers/general_questions_helper.rb:4:in `each'
+  app/helpers/general_questions_helper.rb:4:in `build_all_answers'
+  app/controllers/general_questions_controller.rb:7:in `index'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (101.6ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (136.9ms)
+
+
+Started GET "/general_questions?applicant=1" for 127.0.0.1 at 2011-04-16 11:53:00 -0700
+  Processing by GeneralQuestionsController#index as HTML
+  Parameters: {"applicant"=>"1"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT `people`.* FROM `people` WHERE `people`.`id` = 1 LIMIT 1[0m
+  [1m[35mGeneralQuestion Load (0.4ms)[0m  SELECT `general_questions`.* FROM `general_questions`
+Completed   in 76ms
+
+NoMethodError (undefined method `build_general_answers' for #<Person:0x00000100e40308>):
+  app/helpers/general_questions_helper.rb:5:in `block in build_all_answers'
+  app/helpers/general_questions_helper.rb:4:in `each'
+  app/helpers/general_questions_helper.rb:4:in `build_all_answers'
+  app/controllers/general_questions_controller.rb:7:in `index'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (134.1ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (140.0ms)
+
+
+Started GET "/general_questions?applicant=1" for 127.0.0.1 at 2011-04-16 11:53:13 -0700
+  Processing by GeneralQuestionsController#index as HTML
+  Parameters: {"applicant"=>"1"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT `people`.* FROM `people` WHERE `people`.`id` = 1 LIMIT 1[0m
+  [1m[35mGeneralQuestion Load (0.4ms)[0m  SELECT `general_questions`.* FROM `general_questions`
+Completed   in 148ms
+
+NameError (uninitialized constant GeneralQuestionsController::GeneralQuestions):
+  app/controllers/general_questions_controller.rb:8:in `index'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (105.7ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (111.9ms)
+
+
+Started GET "/general_questions?applicant=1" for 127.0.0.1 at 2011-04-16 11:55:05 -0700
+  Processing by GeneralQuestionsController#index as HTML
+  Parameters: {"applicant"=>"1"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT `people`.* FROM `people` WHERE `people`.`id` = 1 LIMIT 1[0m
+  [1m[35mGeneralQuestion Load (0.4ms)[0m  SELECT `general_questions`.* FROM `general_questions`
+Completed   in 103ms
+
+NameError (uninitialized constant GeneralQuestionsController::GeneralQuestions):
+  app/controllers/general_questions_controller.rb:8:in `index'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (101.1ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (107.3ms)
+
+
+Started GET "/general_questions?applicant=1" for 127.0.0.1 at 2011-04-16 11:55:34 -0700
+  Processing by GeneralQuestionsController#index as HTML
+  Parameters: {"applicant"=>"1"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT `people`.* FROM `people` WHERE `people`.`id` = 1 LIMIT 1[0m
+  [1m[35mGeneralQuestion Load (0.4ms)[0m  SELECT `general_questions`.* FROM `general_questions`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+Rendered general_questions/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 139ms (Views: 9.6ms | ActiveRecord: 1.5ms)
