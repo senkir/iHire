@@ -29868,3 +29868,362 @@ Started GET "/general_questions?applicant=1" for 127.0.0.1 at 2011-04-16 11:55:3
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
 Rendered general_questions/index.html.erb within layouts/application (2.4ms)
 Completed 200 OK in 139ms (Views: 9.6ms | ActiveRecord: 1.5ms)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-17 23:44:28 -0700
+
+Mysql2::Error (Unknown database 'ihire'):
+  
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.5ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-17 23:44:56 -0700
+
+Mysql2::Error (Unknown database 'ihire'):
+  
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-17 23:44:58 -0700
+
+Mysql2::Error (Unknown database 'ihire'):
+  
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.4ms)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-17 23:45:19 -0700
+  Processing by PositionsSearchController#index as HTML
+  [1m[36mPosition Load (2.8ms)[0m  [1mSELECT DISTINCT(location) FROM `positions` ORDER BY updated_on[0m
+  [1m[35mPosition Load (2.2ms)[0m  SELECT DISTINCT(department) FROM `positions` ORDER BY updated_on
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb___4401901499225108571_2173965620_4282559690791733568 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb___4401901499225108571_2173965620_4282559690791733568 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (196.4ms)
+Rendered positions_search/index.html.erb within layouts/application (200.5ms)
+Completed 200 OK in 208ms (Views: 202.5ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/positions_search/index" for 127.0.0.1 at 2011-04-17 23:45:22 -0700
+  Processing by PositionsSearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mSYy2ruqSX1TBCPtYubvbycvp/C2X0zPPnH10U4D++c=", "position"=>{"title"=>"", "location"=>"", "department"=>""}, "commit"=>"Submit"}
+  [1m[36mPosition Load (2.1ms)[0m  [1mSELECT DISTINCT(location) FROM `positions` ORDER BY updated_on[0m
+  [1m[35mPosition Load (25.7ms)[0m  SELECT DISTINCT(department) FROM `positions` ORDER BY updated_on
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb___4401901499225108571_2173899480_4282559690791733568 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb___4401901499225108571_2173899480_4282559690791733568 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (60.7ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)
+  [1m[36mPosition Load (0.3ms)[0m  [1mSELECT `positions`.* FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1) ORDER BY updated_on[0m
+Rendered positions_search/_result.html.erb (1.5ms)
+Rendered positions_search/_result.html.erb (1.2ms)
+Rendered positions_search/_result.html.erb (1.1ms)
+Rendered positions_search/_result.html.erb (1.1ms)
+Rendered positions_search/index.html.erb within layouts/application (77.7ms)
+Completed 200 OK in 84ms (Views: 55.6ms | ActiveRecord: 28.4ms)
+
+
+Started POST "/job_applications/index?position=1" for 127.0.0.1 at 2011-04-17 23:45:24 -0700
+  Processing by JobApplicationsController#index as HTML
+  Parameters: {"authenticity_token"=>"mSYy2ruqSX1TBCPtYubvbycvp/C2X0zPPnH10U4D++c=", "position"=>"1"}
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (46.1ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (2.4ms)[0m  describe `people`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `people` (`is_applicant`, `is_employee`, `first_name`, `middle_name`, `last_name`, `position_id`, `application_state_id`, `created_at`, `updated_at`) VALUES (1, 0, NULL, NULL, NULL, NULL, NULL, '2011-04-18 06:45:24', '2011-04-18 06:45:24')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  describe `application_states`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-18 06:45:24', '2011-04-18 06:45:24')[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE `people` SET `application_state_id` = 2, `updated_at` = '2011-04-18 06:45:24' WHERE `people`.`id` = 2
+  [1m[36mSQL (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mPosition Load (0.3ms)[0m  SELECT `positions`.* FROM `positions` WHERE `positions`.`id` = 1 ORDER BY updated_on LIMIT 1
+Rendered job_applications/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 219ms (Views: 9.4ms | ActiveRecord: 53.0ms)
+
+
+Started GET "/job_applications/next?applicant=2" for 127.0.0.1 at 2011-04-17 23:45:29 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"applicant"=>"2"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[35mApplicationState Load (0.3ms)[0m  SELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 2 LIMIT 1
+Redirected to http://localhost:3000/general_questions?applicant=2
+Completed 302 Found in 57ms
+
+
+Started GET "/general_questions?applicant=2" for 127.0.0.1 at 2011-04-17 23:45:29 -0700
+  Processing by GeneralQuestionsController#index as HTML
+  Parameters: {"applicant"=>"2"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1[0m
+  [1m[35mGeneralQuestion Load (0.4ms)[0m  SELECT `general_questions`.* FROM `general_questions`
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+Rendered general_questions/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 114ms (Views: 9.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/general_questions?applicant=2" for 127.0.0.1 at 2011-04-17 23:52:12 -0700
+  Processing by GeneralQuestionsController#index as HTML
+  Parameters: {"applicant"=>"2"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1
+  [1m[36mGeneralQuestion Load (0.4ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mGeneralAnswer Load (0.3ms)[0m  [1mSELECT `general_answers`.* FROM `general_answers` WHERE (`general_answers`.person_id = 2)[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mSQL (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+Rendered general_questions/index.html.erb within layouts/application (231.8ms)
+Completed   in 356ms
+
+ActionView::Template::Error (undefined local variable or method `question' for #<#<Class:0x000001030d1cc8>:0x000001030b0b18>):
+    2: Please answer the following questions:<br/>
+    3: 
+    4: <% @questions.each do |quesiton|%>
+    5:   <% render :partial => '_question_form', :locals => { :quesiton => question }%>
+    6: <% end%>
+    7: <br/>
+    8: // the form goes here <br />
+  app/views/general_questions/index.html.erb:5:in `block in _app_views_general_questions_index_html_erb___2806279515717625860_2173002500_788318449669342744'
+  app/views/general_questions/index.html.erb:4:in `each'
+  app/views/general_questions/index.html.erb:4:in `_app_views_general_questions_index_html_erb___2806279515717625860_2173002500_788318449669342744'
+  app/controllers/general_questions_controller.rb:10:in `index'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (98.0ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (105.2ms)
+
+
+Started GET "/general_questions?applicant=2" for 127.0.0.1 at 2011-04-17 23:52:32 -0700
+  Processing by GeneralQuestionsController#index as HTML
+  Parameters: {"applicant"=>"2"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1
+  [1m[36mGeneralQuestion Load (0.4ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mGeneralAnswer Load (0.3ms)[0m  [1mSELECT `general_answers`.* FROM `general_answers` WHERE (`general_answers`.person_id = 2)[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+Rendered general_questions/index.html.erb within layouts/application (4.1ms)
+Completed   in 122ms
+
+ActionView::Template::Error (Missing partial general_questions/_question_form with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views", "/Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/vendor/plugins/dynamic_form/app/views", "/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.2.1/app/views"):
+    2: Please answer the following questions:<br/>
+    3: 
+    4: <% @questions.each do |question|%>
+    5:   <% render :partial => '_question_form', :locals => { :quesiton => question }%>
+    6: <% end%>
+    7: <br/>
+    8: // the form goes here <br />
+  app/views/general_questions/index.html.erb:5:in `block in _app_views_general_questions_index_html_erb___2806279515717625860_2162780940_788318449669342744'
+  app/views/general_questions/index.html.erb:4:in `each'
+  app/views/general_questions/index.html.erb:4:in `_app_views_general_questions_index_html_erb___2806279515717625860_2162780940_788318449669342744'
+  app/controllers/general_questions_controller.rb:10:in `index'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (95.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (101.5ms)
+
+
+Started GET "/general_questions?applicant=2" for 127.0.0.1 at 2011-04-17 23:53:00 -0700
+  Processing by GeneralQuestionsController#index as HTML
+  Parameters: {"applicant"=>"2"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1
+  [1m[36mGeneralQuestion Load (0.4ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mGeneralAnswer Load (0.3ms)[0m  [1mSELECT `general_answers`.* FROM `general_answers` WHERE (`general_answers`.person_id = 2)[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+Rendered general_questions/_question_form.html.erb (212.8ms)
+Rendered general_questions/index.html.erb within layouts/application (215.1ms)
+Completed   in 358ms
+
+ActionView::Template::Error (undefined local variable or method `question' for #<#<Class:0x00000101feab08>:0x00000101fe6c10>):
+    1: <li>
+    2:   <ul> <%question.question%> </ul>
+    3: </li>
+  app/views/general_questions/_question_form.html.erb:2:in `_app_views_general_questions__question_form_html_erb___4382758409072657310_2164177360_2442326967553310356'
+  app/views/general_questions/index.html.erb:5:in `block in _app_views_general_questions_index_html_erb___2806279515717625860_2164205040_788318449669342744'
+  app/views/general_questions/index.html.erb:4:in `each'
+  app/views/general_questions/index.html.erb:4:in `_app_views_general_questions_index_html_erb___2806279515717625860_2164205040_788318449669342744'
+  app/controllers/general_questions_controller.rb:10:in `index'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (96.4ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (103.2ms)
+
+
+Started GET "/general_questions?applicant=2" for 127.0.0.1 at 2011-04-17 23:53:55 -0700
+  Processing by GeneralQuestionsController#index as HTML
+  Parameters: {"applicant"=>"2"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1
+  [1m[36mGeneralQuestion Load (0.4ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mGeneralAnswer Load (0.3ms)[0m  [1mSELECT `general_answers`.* FROM `general_answers` WHERE (`general_answers`.person_id = 2)[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+Rendered general_questions/_question_form.html.erb (212.5ms)
+Rendered general_questions/index.html.erb within layouts/application (214.7ms)
+Completed   in 359ms
+
+ActionView::Template::Error (undefined local variable or method `question' for #<#<Class:0x00000101fdbf68>:0x00000101fd67c0>):
+    1: <li>
+    2:   <ul> <%= question.question %> </ul>
+    3: </li>
+  app/views/general_questions/_question_form.html.erb:2:in `_app_views_general_questions__question_form_html_erb___4382758409072657310_2163664740_2442326967553310356'
+  app/views/general_questions/index.html.erb:5:in `block in _app_views_general_questions_index_html_erb___2806279515717625860_2164171340_788318449669342744'
+  app/views/general_questions/index.html.erb:4:in `each'
+  app/views/general_questions/index.html.erb:4:in `_app_views_general_questions_index_html_erb___2806279515717625860_2164171340_788318449669342744'
+  app/controllers/general_questions_controller.rb:10:in `index'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (95.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (102.3ms)
+
+
+Started GET "/general_questions?applicant=2" for 127.0.0.1 at 2011-04-17 23:54:24 -0700
+  Processing by GeneralQuestionsController#index as HTML
+  Parameters: {"applicant"=>"2"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1
+  [1m[36mGeneralQuestion Load (0.4ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mGeneralAnswer Load (0.3ms)[0m  [1mSELECT `general_answers`.* FROM `general_answers` WHERE (`general_answers`.person_id = 2)[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+Rendered general_questions/_question_form.html.erb (0.4ms)
+Rendered general_questions/_question_form.html.erb (0.3ms)
+Rendered general_questions/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 146ms (Views: 12.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/general_questions?applicant=2" for 127.0.0.1 at 2011-04-17 23:54:55 -0700
+  Processing by GeneralQuestionsController#index as HTML
+  Parameters: {"applicant"=>"2"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1
+  [1m[36mGeneralQuestion Load (0.4ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mGeneralAnswer Load (0.3ms)[0m  [1mSELECT `general_answers`.* FROM `general_answers` WHERE (`general_answers`.person_id = 2)[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+Rendered general_questions/_question_form.html.erb (0.4ms)
+Rendered general_questions/_question_form.html.erb (0.4ms)
+Rendered general_questions/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 142ms (Views: 46.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/general_questions?applicant=2" for 127.0.0.1 at 2011-04-17 23:55:20 -0700
+  Processing by GeneralQuestionsController#index as HTML
+  Parameters: {"applicant"=>"2"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1
+  [1m[36mGeneralQuestion Load (0.4ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mGeneralAnswer Load (0.3ms)[0m  [1mSELECT `general_answers`.* FROM `general_answers` WHERE (`general_answers`.person_id = 2)[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+Rendered general_questions/_question_form.html.erb (0.6ms)
+Rendered general_questions/_question_form.html.erb (0.4ms)
+Rendered general_questions/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 155ms (Views: 12.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/general_questions?applicant=2" for 127.0.0.1 at 2011-04-17 23:56:12 -0700
+  Processing by GeneralQuestionsController#index as HTML
+  Parameters: {"applicant"=>"2"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1
+  [1m[36mGeneralQuestion Load (0.4ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mGeneralAnswer Load (0.3ms)[0m  [1mSELECT `general_answers`.* FROM `general_answers` WHERE (`general_answers`.person_id = 2)[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+Rendered general_questions/_question_form.html.erb (0.4ms)
+Rendered general_questions/_question_form.html.erb (0.3ms)
+Rendered general_questions/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 155ms (Views: 12.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/general_questions?applicant=2" for 127.0.0.1 at 2011-04-17 23:56:41 -0700
+  Processing by GeneralQuestionsController#index as HTML
+  Parameters: {"applicant"=>"2"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1
+  [1m[36mGeneralQuestion Load (0.3ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mGeneralAnswer Load (0.3ms)[0m  [1mSELECT `general_answers`.* FROM `general_answers` WHERE (`general_answers`.person_id = 2)[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  ROLLBACK
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+Rendered general_questions/_question_form.html.erb (0.4ms)
+Rendered general_questions/_question_form.html.erb (0.4ms)
+Rendered general_questions/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 127ms (Views: 12.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/general_questions?applicant=2" for 127.0.0.1 at 2011-04-17 23:57:15 -0700
+  Processing by GeneralQuestionsController#index as HTML
+  Parameters: {"applicant"=>"2"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1
+  [1m[36mGeneralQuestion Load (0.4ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mGeneralAnswer Load (0.3ms)[0m  [1mSELECT `general_answers`.* FROM `general_answers` WHERE (`general_answers`.person_id = 2)[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+Rendered general_questions/_question_form.html.erb (0.5ms)
+Rendered general_questions/_question_form.html.erb (0.6ms)
+Rendered general_questions/index.html.erb within layouts/application (40.8ms)
+Completed 200 OK in 149ms (Views: 47.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/general_questions?applicant=2" for 127.0.0.1 at 2011-04-17 23:57:23 -0700
+  Processing by GeneralQuestionsController#index as HTML
+  Parameters: {"applicant"=>"2"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1
+  [1m[36mGeneralQuestion Load (0.4ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mGeneralAnswer Load (0.3ms)[0m  [1mSELECT `general_answers`.* FROM `general_answers` WHERE (`general_answers`.person_id = 2)[0m
+  [1m[35mSQL (0.3ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+Rendered general_questions/_question_form.html.erb (0.4ms)
+Rendered general_questions/_question_form.html.erb (0.4ms)
+Rendered general_questions/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 150ms (Views: 12.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/general_questions?applicant=2" for 127.0.0.1 at 2011-04-17 23:58:17 -0700
+  Processing by GeneralQuestionsController#index as HTML
+  Parameters: {"applicant"=>"2"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 2 LIMIT 1
+  [1m[36mGeneralQuestion Load (0.4ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mGeneralAnswer Load (0.5ms)[0m  [1mSELECT `general_answers`.* FROM `general_answers` WHERE (`general_answers`.person_id = 2)[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  ROLLBACK
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+Rendered general_questions/_question_form.html.erb (0.4ms)
+Rendered general_questions/_question_form.html.erb (0.5ms)
+Rendered general_questions/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 480ms (Views: 12.7ms | ActiveRecord: 1.6ms)

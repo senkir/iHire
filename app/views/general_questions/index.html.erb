@@ -1,2 +1,8 @@
-// the form goes here <br />
-<%= link_to 'next section', job_applications_next_path(@applicant.id) %>
+Hello Applicant #<%= @applicant.id %><br/>
+Please answer the following <%= @questions.count %> questions:<br/>
+
+<% @questions.each do |question|%>
+  <%= render :partial => 'question_form', :locals => { :question => question }%>
+<% end%>
+<br/><br />
+or just skip to the <%= link_to 'next.', job_applications_next_path(@applicant.id) %> section.

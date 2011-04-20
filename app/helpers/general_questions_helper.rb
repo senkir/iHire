@@ -3,6 +3,7 @@ module GeneralQuestionsHelper
     @questions = GeneralQuestion.all
     @questions.each do | question |
     person.general_answers.build(question.id)
+    person.save
     end
   end
   
