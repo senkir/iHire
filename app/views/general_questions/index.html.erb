@@ -1,8 +1,11 @@
 Hello Applicant #<%= @applicant.id %><br/>
 Please answer the following <%= @questions.count %> questions:<br/>
 
-<% @questions.each do |question|%>
-  <%= render :partial => 'question_form', :locals => { :question => question }%>
-<% end%>
+  <% semantic_form_for @applicant do |form| %>
+    <% form.semantic_fields_for :general_answers do |general_answer|%>
+      <% general_answer.inputs %>
+      <% end%>
+      <% form.buttons %>
+      <% end %>
 <br/><br />
 or just skip to the <%= link_to 'next.', job_applications_next_path(@applicant.id) %> section.

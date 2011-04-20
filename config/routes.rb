@@ -1,8 +1,9 @@
 IHireApplicant::Application.routes.draw do |map|
-  resources :general_questions
+  resources :general_questions, :people
 
   namespace "admin" do 
-      resources :questions, :answers, :positions
+      resources :general_questions, :position_specific_questions, :general_answers
+      resources :position_specific_answers, :positions
   end
   
   # match ':controller(/:action(/:id(.:format)))'
