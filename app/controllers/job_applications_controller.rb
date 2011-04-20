@@ -29,7 +29,8 @@ class JobApplicationsController < ApplicationController
   def next
       @applicant = Person.find(params[:applicant])
       @state = @applicant.application_state
-      
+      @state.next
+      @state.save
       #redirect based on state
       #for now this redirects to index page
       if @state.application_complete?
@@ -42,7 +43,7 @@ class JobApplicationsController < ApplicationController
           redirect_to position_specific_answers_path(:applicant => params[:applicant]) 
         end
         if @state.personal_information?
-          redirect_to edit_person_path(:applicant => params[:applicant])
+          redirect_to edit_person_path(params[:applicant])
         end
         if @state.in_review?
           redirect_to person_path(params[:applicant])

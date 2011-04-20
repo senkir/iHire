@@ -34,7 +34,7 @@ class PeopleController < ApplicationController
 
   # GET /people/1/edit
   def edit
-    @person = Person.find(params[:applicant])
+    @person = Person.find(params[:id])
   end
 
   # POST /people

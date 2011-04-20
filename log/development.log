@@ -34529,3 +34529,374 @@ AASM::InvalidTransition (Event 'close' cannot transition from 'application_compl
 Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
 Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (147.4ms)
 Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (153.9ms)
+DEPRECATION WARNING: You are using the old router DSL which will be removed in Rails 3.1. Please check how to update your routes file at: http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/. (called from <top (required)> at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/config/routes.rb:1)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-20 09:18:03 -0700
+  Processing by PositionsSearchController#index as HTML
+  [1m[36mPosition Load (2.0ms)[0m  [1mSELECT DISTINCT(location) FROM `positions` ORDER BY updated_on[0m
+  [1m[35mPosition Load (18.7ms)[0m  SELECT DISTINCT(department) FROM `positions` ORDER BY updated_on
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb___1776046034136943342_2161257720__693930583870650432 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb___1776046034136943342_2161257720__693930583870650432 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (168.9ms)
+Rendered positions_search/index.html.erb within layouts/application (174.0ms)
+Completed 200 OK in 181ms (Views: 160.1ms | ActiveRecord: 20.6ms)
+
+
+Started POST "/positions_search/index" for 127.0.0.1 at 2011-04-20 09:18:05 -0700
+  Processing by PositionsSearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QLpkYvmlZj9MS3SlWcypJlLIMJhgUplY4asiNPLsPw0=", "position"=>{"title"=>"", "location"=>"", "department"=>""}, "commit"=>"Submit"}
+  [1m[36mPosition Load (2.2ms)[0m  [1mSELECT DISTINCT(location) FROM `positions` ORDER BY updated_on[0m
+  [1m[35mPosition Load (25.3ms)[0m  SELECT DISTINCT(department) FROM `positions` ORDER BY updated_on
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb___1776046034136943342_2173148420__693930583870650432 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb___1776046034136943342_2173148420__693930583870650432 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (61.9ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)
+  [1m[36mPosition Load (0.4ms)[0m  [1mSELECT `positions`.* FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1) ORDER BY updated_on[0m
+Rendered positions_search/_result.html.erb (33.8ms)
+Rendered positions_search/_result.html.erb (1.2ms)
+Rendered positions_search/_result.html.erb (1.1ms)
+Rendered positions_search/_result.html.erb (1.0ms)
+Rendered positions_search/index.html.erb within layouts/application (111.9ms)
+Completed 200 OK in 119ms (Views: 90.0ms | ActiveRecord: 28.2ms)
+
+
+Started POST "/job_applications/index?position=1" for 127.0.0.1 at 2011-04-20 09:18:07 -0700
+  Processing by JobApplicationsController#index as HTML
+  Parameters: {"authenticity_token"=>"QLpkYvmlZj9MS3SlWcypJlLIMJhgUplY4asiNPLsPw0=", "position"=>"1"}
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mSHOW TABLES[0m
+  [1m[35mSQL (6.1ms)[0m  describe `people`
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `people` (`is_applicant`, `is_employee`, `first_name`, `middle_name`, `last_name`, `position_id`, `application_state_id`, `created_at`, `updated_at`) VALUES (1, 0, NULL, NULL, NULL, NULL, NULL, '2011-04-20 16:18:08', '2011-04-20 16:18:08')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+  [1m[36mPosition Load (0.3ms)[0m  [1mSELECT `positions`.* FROM `positions` WHERE `positions`.`id` = 1 ORDER BY updated_on LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.9ms)[0m  [1mdescribe `application_states`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-20 16:18:08', '2011-04-20 16:18:08')
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE `people` SET `position_id` = 1, `application_state_id` = 17, `updated_at` = '2011-04-20 16:18:08' WHERE `people`.`id` = 17[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+Rendered job_applications/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 198ms (Views: 11.3ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/job_applications/next?applicant=17" for 127.0.0.1 at 2011-04-20 09:18:09 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"applicant"=>"17"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT `people`.* FROM `people` WHERE `people`.`id` = 17 LIMIT 1[0m
+  [1m[35mApplicationState Load (0.3ms)[0m  SELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 17 LIMIT 1
+Completed   in 122ms
+
+ActionView::MissingTemplate (Missing template job_applications/next with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views", "/Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/vendor/plugins/dynamic_form/app/views", "/Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/devise-1.2.1/app/views"):
+  
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.8ms)
+
+
+Started GET "/job_applications/next?applicant=17" for 127.0.0.1 at 2011-04-20 09:19:15 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"applicant"=>"17"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT `people`.* FROM `people` WHERE `people`.`id` = 17 LIMIT 1[0m
+  [1m[35mApplicationState Load (0.3ms)[0m  SELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 17 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE `application_states` SET `state` = 'general_questions', `updated_at` = '2011-04-20 16:19:15' WHERE `application_states`.`id` = 17
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/general_answers?applicant=17
+Completed 302 Found in 135ms
+
+
+Started GET "/general_answers?applicant=17" for 127.0.0.1 at 2011-04-20 09:19:15 -0700
+  Processing by GeneralAnswersController#index as HTML
+  Parameters: {"applicant"=>"17"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 17 LIMIT 1
+  [1m[36mGeneralQuestion Load (0.4ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+  [1m[35mGeneralAnswer Load (0.5ms)[0m  SELECT `general_answers`.* FROM `general_answers` WHERE (`general_answers`.person_id = 17)
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  describe `general_answers`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `general_answers` (`answer`, `person_id`, `general_question_id`) VALUES (NULL, 17, 1)[0m
+  [1m[35mSQL (1.1ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `general_answers` (`answer`, `person_id`, `general_question_id`) VALUES (NULL, 17, 2)
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mGeneralQuestion Load (0.3ms)[0m  SELECT `general_questions`.* FROM `general_questions`
+  [1m[36mGeneralAnswer Load (0.3ms)[0m  [1mSELECT `general_answers`.* FROM `general_answers` WHERE (`general_answers`.person_id = 17)[0m
+  [1m[35mGeneralAnswer Load (0.5ms)[0m  SELECT `general_answers`.* FROM `general_answers` WHERE `general_answers`.`general_question_id` = 1 AND `general_answers`.`person_id` = 17 LIMIT 1
+  [1m[36mGeneralAnswer Load (0.4ms)[0m  [1mSELECT `general_answers`.* FROM `general_answers` WHERE `general_answers`.`general_question_id` = 2 AND `general_answers`.`person_id` = 17 LIMIT 1[0m
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_general_answers_index_html_erb__4003146689877812528_2173934240__1487507729991596328 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/general_answers/index.html.erb:4)
+Rendered general_answers/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 158ms (Views: 20.7ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/job_applications/next?applicant=17" for 127.0.0.1 at 2011-04-20 09:19:18 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"applicant"=>"17"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 17 LIMIT 1
+  [1m[36mApplicationState Load (0.3ms)[0m  [1mSELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 17 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE `application_states` SET `state` = 'position_specific_questions', `updated_at` = '2011-04-20 16:19:18' WHERE `application_states`.`id` = 17[0m
+  [1m[35mSQL (17.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/position_specific_answers?applicant=17
+Completed 302 Found in 118ms
+
+
+Started GET "/position_specific_answers?applicant=17" for 127.0.0.1 at 2011-04-20 09:19:18 -0700
+  Processing by PositionSpecificAnswersController#index as HTML
+  Parameters: {"applicant"=>"17"}
+  [1m[36mPerson Load (0.6ms)[0m  [1mSELECT `people`.* FROM `people` WHERE `people`.`id` = 17 LIMIT 1[0m
+Rendered position_specific_answers/index.html.erb within layouts/application (37.6ms)
+Completed 200 OK in 99ms (Views: 45.7ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/job_applications/next?applicant=17" for 127.0.0.1 at 2011-04-20 09:19:25 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"applicant"=>"17"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 17 LIMIT 1
+  [1m[36mApplicationState Load (0.3ms)[0m  [1mSELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 17 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE `application_states` SET `state` = 'personal_information', `updated_at` = '2011-04-20 16:19:25' WHERE `application_states`.`id` = 17[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Completed   in 63ms
+
+ActionController::RoutingError (No route matches {:action=>"edit", :controller=>"people", :applicant=>"17"}):
+  app/controllers/job_applications_controller.rb:46:in `next'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (35.5ms)
+
+
+Started GET "/job_applications/next?applicant=17" for 127.0.0.1 at 2011-04-20 09:21:53 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"applicant"=>"17"}
+  [1m[36mPerson Load (0.5ms)[0m  [1mSELECT `people`.* FROM `people` WHERE `people`.`id` = 17 LIMIT 1[0m
+  [1m[35mApplicationState Load (0.3ms)[0m  SELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 17 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE `application_states` SET `state` = 'in_review', `updated_at` = '2011-04-20 16:21:53' WHERE `application_states`.`id` = 17
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/people/17
+Completed 302 Found in 339ms
+
+
+Started GET "/people/17" for 127.0.0.1 at 2011-04-20 09:21:53 -0700
+  Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mPerson Load (0.5ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 17 LIMIT 1
+Rendered people/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 57ms (Views: 11.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-04-20 09:22:28 -0700
+  Processing by PositionsSearchController#index as HTML
+  [1m[36mPosition Load (2.2ms)[0m  [1mSELECT DISTINCT(location) FROM `positions` ORDER BY updated_on[0m
+  [1m[35mPosition Load (2.4ms)[0m  SELECT DISTINCT(department) FROM `positions` ORDER BY updated_on
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb___1776046034136943342_2173691300__693930583870650432 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb___1776046034136943342_2173691300__693930583870650432 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (325.5ms)
+Rendered positions_search/index.html.erb within layouts/application (330.7ms)
+Completed 200 OK in 338ms (Views: 332.5ms | ActiveRecord: 4.6ms)
+
+
+Started POST "/positions_search/index" for 127.0.0.1 at 2011-04-20 09:22:30 -0700
+  Processing by PositionsSearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QLpkYvmlZj9MS3SlWcypJlLIMJhgUplY4asiNPLsPw0=", "position"=>{"title"=>"", "location"=>"", "department"=>""}, "commit"=>"Submit"}
+  [1m[36mPosition Load (2.2ms)[0m  [1mSELECT DISTINCT(location) FROM `positions` ORDER BY updated_on[0m
+  [1m[35mPosition Load (2.1ms)[0m  SELECT DISTINCT(department) FROM `positions` ORDER BY updated_on
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from block in _app_views_positions_search__search_form_html_erb___1776046034136943342_2152052860__693930583870650432 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:4)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_positions_search__search_form_html_erb___1776046034136943342_2152052860__693930583870650432 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/positions_search/_search_form.html.erb:3)
+Rendered positions_search/_search_form.html.erb (94.0ms)
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1)
+  [1m[36mPosition Load (0.4ms)[0m  [1mSELECT `positions`.* FROM `positions` WHERE (title like '%%%' and location like '%' and department like '%' and is_open = 1) ORDER BY updated_on[0m
+Rendered positions_search/_result.html.erb (1.8ms)
+Rendered positions_search/_result.html.erb (1.3ms)
+Rendered positions_search/_result.html.erb (1.1ms)
+Rendered positions_search/_result.html.erb (1.0ms)
+Rendered positions_search/index.html.erb within layouts/application (111.7ms)
+Completed 200 OK in 118ms (Views: 113.0ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/job_applications/index?position=1" for 127.0.0.1 at 2011-04-20 09:22:32 -0700
+  Processing by JobApplicationsController#index as HTML
+  Parameters: {"authenticity_token"=>"QLpkYvmlZj9MS3SlWcypJlLIMJhgUplY4asiNPLsPw0=", "position"=>"1"}
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSQL (2.6ms)[0m  [1mdescribe `people`[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `people` (`is_applicant`, `is_employee`, `first_name`, `middle_name`, `last_name`, `position_id`, `application_state_id`, `created_at`, `updated_at`) VALUES (1, 0, NULL, NULL, NULL, NULL, NULL, '2011-04-20 16:22:32', '2011-04-20 16:22:32')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mPosition Load (0.3ms)[0m  SELECT `positions`.* FROM `positions` WHERE `positions`.`id` = 1 ORDER BY updated_on LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  describe `application_states`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `application_states` (`state`, `created_at`, `updated_at`) VALUES ('new_applicant', '2011-04-20 16:22:32', '2011-04-20 16:22:32')[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE `people` SET `position_id` = 1, `application_state_id` = 18, `updated_at` = '2011-04-20 16:22:32' WHERE `people`.`id` = 18
+  [1m[36mSQL (1.0ms)[0m  [1mCOMMIT[0m
+Rendered job_applications/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 176ms (Views: 10.1ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/job_applications/next?applicant=18" for 127.0.0.1 at 2011-04-20 09:22:36 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"applicant"=>"18"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 18 LIMIT 1
+  [1m[36mApplicationState Load (0.3ms)[0m  [1mSELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 18 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.3ms)[0m  [1mUPDATE `application_states` SET `state` = 'general_questions', `updated_at` = '2011-04-20 16:22:36' WHERE `application_states`.`id` = 18[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/general_answers?applicant=18
+Completed 302 Found in 127ms
+
+
+Started GET "/general_answers?applicant=18" for 127.0.0.1 at 2011-04-20 09:22:36 -0700
+  Processing by GeneralAnswersController#index as HTML
+  Parameters: {"applicant"=>"18"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT `people`.* FROM `people` WHERE `people`.`id` = 18 LIMIT 1[0m
+  [1m[35mGeneralQuestion Load (0.4ms)[0m  SELECT `general_questions`.* FROM `general_questions`
+  [1m[36mGeneralAnswer Load (0.4ms)[0m  [1mSELECT `general_answers`.* FROM `general_answers` WHERE (`general_answers`.person_id = 18)[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mSQL (2.1ms)[0m  [1mdescribe `general_answers`[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `general_answers` (`answer`, `person_id`, `general_question_id`) VALUES (NULL, 18, 1)
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `general_answers` (`answer`, `person_id`, `general_question_id`) VALUES (NULL, 18, 2)[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mGeneralQuestion Load (0.3ms)[0m  [1mSELECT `general_questions`.* FROM `general_questions`[0m
+  [1m[35mGeneralAnswer Load (0.3ms)[0m  SELECT `general_answers`.* FROM `general_answers` WHERE (`general_answers`.person_id = 18)
+  [1m[36mGeneralAnswer Load (0.4ms)[0m  [1mSELECT `general_answers`.* FROM `general_answers` WHERE `general_answers`.`general_question_id` = 1 AND `general_answers`.`person_id` = 18 LIMIT 1[0m
+  [1m[35mGeneralAnswer Load (0.4ms)[0m  SELECT `general_answers`.* FROM `general_answers` WHERE `general_answers`.`general_question_id` = 2 AND `general_answers`.`person_id` = 18 LIMIT 1
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_general_answers_index_html_erb__4003146689877812528_2161229720__1487507729991596328 at /Volumes/Gallifrey/webDevelopment/juniorProject/aesemployment2011/app/views/general_answers/index.html.erb:4)
+Rendered general_answers/index.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 161ms (Views: 14.9ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/job_applications/next?applicant=18" for 127.0.0.1 at 2011-04-20 09:22:41 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"applicant"=>"18"}
+  [1m[36mPerson Load (0.7ms)[0m  [1mSELECT `people`.* FROM `people` WHERE `people`.`id` = 18 LIMIT 1[0m
+  [1m[35mApplicationState Load (0.3ms)[0m  SELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 18 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE `application_states` SET `state` = 'position_specific_questions', `updated_at` = '2011-04-20 16:22:41' WHERE `application_states`.`id` = 18
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/position_specific_answers?applicant=18
+Completed 302 Found in 93ms
+
+
+Started GET "/position_specific_answers?applicant=18" for 127.0.0.1 at 2011-04-20 09:22:41 -0700
+  Processing by PositionSpecificAnswersController#index as HTML
+  Parameters: {"applicant"=>"18"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 18 LIMIT 1
+Rendered position_specific_answers/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 42ms (Views: 9.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/job_applications/next?applicant=18" for 127.0.0.1 at 2011-04-20 09:22:43 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"applicant"=>"18"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT `people`.* FROM `people` WHERE `people`.`id` = 18 LIMIT 1[0m
+  [1m[35mApplicationState Load (0.3ms)[0m  SELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 18 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.4ms)[0m  UPDATE `application_states` SET `state` = 'personal_information', `updated_at` = '2011-04-20 16:22:43' WHERE `application_states`.`id` = 18
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/people/18/edit
+Completed 302 Found in 131ms
+
+
+Started GET "/people/18/edit" for 127.0.0.1 at 2011-04-20 09:22:43 -0700
+  Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 18 LIMIT 1
+Rendered people/_form.html.erb (1.0ms)
+Rendered people/edit.html.erb within layouts/application (3.0ms)
+Completed   in 99ms
+
+ActionView::Template::Error (undefined method `model_name' for NilClass:Class):
+    1: <%= form_for(@question) do |f| %>
+    2:   <% if @question.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@question.errors.count, "error") %> prohibited this question from being saved:</h2>
+  app/views/people/_form.html.erb:1:in `_app_views_people__form_html_erb__2161543858805323820_2173917360_4358271123835976230'
+  app/views/people/edit.html.erb:3:in `_app_views_people_edit_html_erb__1219102562070533009_2173965140__1487507729991596328'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (156.2ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (164.7ms)
+
+
+Started GET "/people/18/edit" for 127.0.0.1 at 2011-04-20 09:24:19 -0700
+  Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT `people`.* FROM `people` WHERE `people`.`id` = 18 LIMIT 1[0m
+  [1m[35mApplicationState Load (0.3ms)[0m  SELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 18 LIMIT 1
+  [1m[36mApplicationState Load (0.4ms)[0m  [1mSELECT `application_states`.* FROM `application_states`[0m
+  [1m[35mPosition Load (0.4ms)[0m  SELECT `positions`.* FROM `positions` WHERE `positions`.`id` = 1 ORDER BY updated_on LIMIT 1
+  [1m[36mPosition Load (0.4ms)[0m  [1mSELECT `positions`.* FROM `positions` ORDER BY updated_on[0m
+Rendered people/_form.html.erb (120.8ms)
+Rendered people/edit.html.erb within layouts/application (123.7ms)
+Completed   in 228ms
+
+ActionView::Template::Error (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id):
+    5: <%= link_to 'Show', @person %> |
+    6: <%= link_to 'Back', person_path %><br/><br/>
+    7: 
+    8: <%= link_to 'next section', job_applications_next_path(:applicant => @applicant.id) %>
+  app/views/people/edit.html.erb:8:in `_app_views_people_edit_html_erb__1219102562070533009_2173537720__1487507729991596328'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (150.7ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (157.8ms)
+
+
+Started GET "/people/18/edit" for 127.0.0.1 at 2011-04-20 09:24:47 -0700
+  Processing by PeopleController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mPerson Load (0.4ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 18 LIMIT 1
+  [1m[36mApplicationState Load (0.3ms)[0m  [1mSELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 18 LIMIT 1[0m
+  [1m[35mApplicationState Load (0.3ms)[0m  SELECT `application_states`.* FROM `application_states`
+  [1m[36mPosition Load (0.3ms)[0m  [1mSELECT `positions`.* FROM `positions` WHERE `positions`.`id` = 1 ORDER BY updated_on LIMIT 1[0m
+  [1m[35mPosition Load (0.6ms)[0m  SELECT `positions`.* FROM `positions` ORDER BY updated_on
+Rendered people/_form.html.erb (113.3ms)
+Rendered people/edit.html.erb within layouts/application (118.7ms)
+Completed 200 OK in 188ms (Views: 123.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/job_applications/next?applicant=18" for 127.0.0.1 at 2011-04-20 09:25:02 -0700
+  Processing by JobApplicationsController#next as HTML
+  Parameters: {"applicant"=>"18"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT `people`.* FROM `people` WHERE `people`.`id` = 18 LIMIT 1[0m
+  [1m[35mApplicationState Load (0.3ms)[0m  SELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 18 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (1.0ms)[0m  UPDATE `application_states` SET `state` = 'in_review', `updated_at` = '2011-04-20 16:25:02' WHERE `application_states`.`id` = 18
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/people/18
+Completed 302 Found in 97ms
+
+
+Started GET "/people/18" for 127.0.0.1 at 2011-04-20 09:25:02 -0700
+  Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mPerson Load (0.3ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 18 LIMIT 1
+Rendered people/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 58ms (Views: 11.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/job_applications/complete?applicant=18" for 127.0.0.1 at 2011-04-20 09:25:05 -0700
+  Processing by JobApplicationsController#complete as HTML
+  Parameters: {"applicant"=>"18"}
+  [1m[36mPerson Load (0.3ms)[0m  [1mSELECT `people`.* FROM `people` WHERE `people`.`id` = 18 LIMIT 1[0m
+  [1m[35mApplicationState Load (0.3ms)[0m  SELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 18 LIMIT 1
+Redirected to http://localhost:3000next
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE `application_states` SET `state` = 'application_complete', `updated_at` = '2011-04-20 16:25:05' WHERE `application_states`.`id` = 18
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mPerson Load (0.3ms)[0m  SELECT `people`.* FROM `people` WHERE `people`.`id` = 18 LIMIT 1
+Completed 302 Found in 78ms
+
+
+Started GET "/job_applications/complete?applicant=18" for 127.0.0.1 at 2011-04-20 09:25:05 -0700
+  Processing by JobApplicationsController#complete as HTML
+  Parameters: {"applicant"=>"18"}
+  [1m[36mPerson Load (0.4ms)[0m  [1mSELECT `people`.* FROM `people` WHERE `people`.`id` = 18 LIMIT 1[0m
+  [1m[35mApplicationState Load (0.3ms)[0m  SELECT `application_states`.* FROM `application_states` WHERE `application_states`.`id` = 18 LIMIT 1
+Completed   in 70ms
+
+AASM::InvalidTransition (Event 'close' cannot transition from 'application_complete'):
+  app/controllers/job_applications_controller.rb:60:in `complete'
+
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_trace.erb (36.3ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (122.8ms)
+Rendered /Users/travischurchill/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (164.6ms)
