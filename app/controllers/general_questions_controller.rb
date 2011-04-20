@@ -6,6 +6,7 @@ class GeneralQuestionsController < ApplicationController
     @page_title = "Application General Questions"
     build_all_answers @applicant
     @questions = GeneralQuestion.all
+    @answers = @applicant.general_answers.all
     
     respond_to do |format|
       format.html #index.html.erb
