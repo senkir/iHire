@@ -1,4 +1,4 @@
-module GeneralQuestionsHelper
+module GeneralAnswersHelper
   def build_all_answers person
     @questions = GeneralQuestion.all
     @answers = person.general_answers.all

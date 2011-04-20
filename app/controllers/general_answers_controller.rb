@@ -1,5 +1,5 @@
-class GeneralQuestionsController < ApplicationController
-  include GeneralQuestionsHelper
+class GeneralAnswersController < ApplicationController
+  include GeneralAnswersHelper
   
   def index
     @applicant = Person.find(params[:applicant])
@@ -15,13 +15,12 @@ class GeneralQuestionsController < ApplicationController
   end
 
   def results
-    @question = GeneralQuestion.find(1)
-    @answer = GeneralAnswer.find(params[:id])
+    @answers = GeneralAnswer.all
+    @questions = GeneralQuestion.all
   end
 
   def create
-    @answer = Answer.new(params[:answer])
-    @question = Question.find(1)
+    @answer = GeneralAnswer.find(params[:general_answer])
     respond_to do |format|
       if @answer.save
         format.html { redirect_to(:action => "results", :id => @answer.id, :notice => 'General question was successfully created.') }
@@ -32,8 +31,7 @@ class GeneralQuestionsController < ApplicationController
         format.xml  { render :xml => @answer.errors, :status => :unprocessable_entity }
       end
     end
-  end
-  
+  end  
 end
 
 =begin
@@ -51,3 +49,4 @@ end
     </div>
   <% end %>
 =end
+

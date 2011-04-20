@@ -1,7 +1,7 @@
-Hello Applicant #<%= @applicant.id %><br/>
+Hello Applicant! <br/>
 Please answer the following <%= @questions.count %> questions:<br/>
 
-  <% semantic_form_for @applicant do |form| %>
+  <% semantic_form_for :general_answers do |form| %>
     <% @questions.each do |question| %>
       <% @answer = GeneralAnswer.find_by_general_question_id_and_person_id( question.id, @applicant.id ) %>
       <%= semantic_fields_for @answer do |answer|%>
@@ -11,4 +11,4 @@ Please answer the following <%= @questions.count %> questions:<br/>
     <%= form.commit_button :label => 'Save Answers' %>
   <% end %>
 <br/><br />
-or just skip to the <%= link_to 'next.', job_applications_next_path(@applicant.id) %> section.
+or just skip to the <%= link_to 'next.', job_applications_next_path(:applicant => @applicant.id) %> section.

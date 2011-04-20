@@ -1,0 +1,8 @@
+<h1>Editing person</h1>
+
+<%= render 'form'%>
+
+<%= link_to 'Show', @person %> |
+<%= link_to 'Back', person_path %><br/><br/>
+
+<%= link_to 'next section', job_applications_next_path(:applicant => @applicant.id) %>

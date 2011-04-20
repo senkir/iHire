@@ -1,0 +1,12 @@
+Person ID: <%=h @person.id %><br/>
+First Name: <%=h @person.first_name %><br/>
+Middle Name: <%=h @person.middle_name %><br/>
+Last Name: <%=h @person.last_name %><br/>
+Position ID: <%=h @person.position_id %>
+</p>
+
+
+<%= link_to 'Edit', person_path(@person) %> |
+<%= link_to 'Back', people_path %><br/><br/>
+
+<%= link_to 'complete application', job_applications_complete_path(:applicant => @person.id) %>

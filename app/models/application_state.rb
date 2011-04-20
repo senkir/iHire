@@ -18,7 +18,6 @@ class ApplicationState < ActiveRecord::Base
       transitions :to => :position_specific_questions, :from => [:general_questions]
       transitions :to => :personal_information, :from => [:position_specific_questions]
       transitions :to => :in_review, :from => [:personal_information]
-      transitions :to => :application_complete
     end
     
     aasm_event :edit_information do

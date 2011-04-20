@@ -17,9 +17,10 @@ class JobApplicationsController < ApplicationController
       @applicant = Person.new
       @applicant.save
     #@applicant.application_state = @application_state
-      @applicant.build_application_state
-      @applicant.save
+     @applicant.build_application_state
      @applicant.position = Position.find(params[:position])
+     @applicant.save
+
     end
     @page_title = name_for_state(@applicant.application_state)      
   end
@@ -28,25 +29,36 @@ class JobApplicationsController < ApplicationController
   def next
       @applicant = Person.find(params[:applicant])
       @state = @applicant.application_state
-      @state.next
-     # @application.save
+      
       #redirect based on state
       #for now this redirects to index page
-      if @state.general_questions?
-        redirect_to general_questions_path( :applicant => params[:applicant])
-      end
-      if @state.position_specific_questions?
-        redirect_to position_specific_questions_path(:applicant => params[:applicant]) 
-      end
-      if @state.personal_information?
-        redirect_to personal_information_path(:applicant => params[:applicant])
-      end
       if @state.application_complete?
         redirect_to job_applications_complete_path(:applicant => params[:applicant])
+      else
+        if @state.general_questions?
+          redirect_to general_answers_path( :applicant => params[:applicant])
+        end
+        if @state.position_specific_questions?
+          redirect_to position_specific_answers_path(:applicant => params[:applicant]) 
+        end
+        if @state.personal_information?
+          redirect_to edit_person_path(:applicant => params[:applicant])
+        end
+        if @state.in_review?
+          redirect_to person_path(params[:applicant])
+        end
       end
   end
   
   def complete
     @applicant = Person.find(params[:applicant])
+    @state = @applicant.application_state
+    if ! @state.application_complete?
+      redirect_to 'next'
+    end
+    @state.close
+    @state.save
+    @applicant = Person.find(params[:applicant])
   end
+  
 end

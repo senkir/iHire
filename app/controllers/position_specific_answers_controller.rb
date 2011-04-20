@@ -1,4 +1,4 @@
-class PositionSpecificQuestionsController < ApplicationController
+class PositionSpecificAnswersController < ApplicationController
 
 #  show the general questions and allow the apploicant to answer each of them in turn
   def index  
