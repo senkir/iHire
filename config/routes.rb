@@ -1,20 +1,17 @@
 IHireApplicant::Application.routes.draw do |map|
-<<<<<<< .mine
+  get "login/Start"
+
   get "personal_information/get_info"
   
   resources :general_questions, :addresses
-=======
   resources :general_answers, :position_specific_answers, :people
->>>>>>> .r116
-
+  
   namespace "admin" do 
       resources :general_questions, :position_specific_questions
       resources :positions
   end
   
-  # match ':controller(/:action(/:id(.:format)))'
-
-  #resources :people, :controller => "job_application"
+  
   
   #match 'Admin::Questions' => 'Admin::Questions#index'
   #match 'questions/:id' => 'Admin::Questions#show'
@@ -22,33 +19,32 @@ IHireApplicant::Application.routes.draw do |map|
   #match 'questions/new' => 'Admin::Questions#new'
   #match 'questions/:action' => 'Admin::Questions'
   
-  #Log in controllers
-  get "login/start"
-  
-  match "/login/start" => "login#start"
-
   match "positions_admin" => "positions_admin#index"
   
   get "job_questions/index"
 
-  get "job_questions/results"
-  
-  #search controllers
+  get "job_questions/results"    
   match "/positions_search/index" => "positions_search#index"
-  
   get "positions_search/index"
-    
-  match "positions_search" => "positions_search#index"
-    
+  
+  get "positions_search/results"
+
+  get "positions_search/detail"
+  
   get "questions_admin/index"
 
+  match "positions_search" => "positions_search#index"
+  
+  get "login/start"
+  match "/login/start" => "login#start"
+  
   #application navigation controller
   match "/job_applications/index" => "job_applications#index"
   
   match "/job_applications/next" => "job_applications#next"
   
   match "/job_applications/complete" => "job_applications#complete"
-  #CRUD for quesitons
+  
   #match "questions/new" => "Admin::Questions#new"
   #match "questions/:id" => "Admin::Questions#show"
   #match "questions/:id/edit" => "Admin::Questions#edit"
@@ -106,7 +102,7 @@ IHireApplicant::Application.routes.draw do |map|
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => "welcome#index"
-  root :to => "positions_search#index"
+  root :to => "Home#Start"
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
