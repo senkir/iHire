@@ -1,5 +1,11 @@
 IHireApplicant::Application.routes.draw do |map|
+<<<<<<< .mine
+  get "personal_information/get_info"
+  
+  resources :general_questions, :addresses
+=======
   resources :general_answers, :position_specific_answers, :people
+>>>>>>> .r116
 
   namespace "admin" do 
       resources :general_questions, :position_specific_questions
@@ -16,6 +22,11 @@ IHireApplicant::Application.routes.draw do |map|
   #match 'questions/new' => 'Admin::Questions#new'
   #match 'questions/:action' => 'Admin::Questions'
   
+  #Log in controllers
+  get "login/start"
+  
+  match "/login/start" => "login#start"
+
   match "positions_admin" => "positions_admin#index"
   
   get "job_questions/index"

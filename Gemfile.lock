@@ -31,6 +31,7 @@ GEM
     activesupport (3.0.5)
     arel (2.0.9)
     bcrypt-ruby (2.1.4)
+    bcrypt-ruby (2.1.4-x86-mingw32)
     builder (2.1.2)
     devise (1.2.1)
       bcrypt-ruby (~> 2.1.2)
@@ -50,6 +51,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     mysql2 (0.2.6)
+    mysql2 (0.2.6-x86-mingw32)
     orm_adapter (0.0.4)
     polyglot (0.3.1)
     rack (1.2.1)
@@ -80,6 +82,7 @@ GEM
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
   aasm
