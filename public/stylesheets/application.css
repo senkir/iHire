@@ -34,6 +34,14 @@
   width: 600px;
 }
 
+#surveyAnswer {
+  background: #eee000;
+  padding: 5px;
+  clear: both;
+  font: 10px;
+  width: 400px;
+}
+
 #locationsColumn, #departmentsColumn {
   background: #eeeeee;
   width: 250px;

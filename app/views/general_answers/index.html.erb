@@ -1,7 +1,7 @@
 Hello Applicant! <br/>
 Please answer the following <%= @questions.count %> questions:<br/>
 
-  <% semantic_form_for @applicant, :html => { :controller => "general_answers", :class => "general_answer"} do |form|%>
+<%= semantic_form_for @applicant, :url => general_answer_path(@applicant) do |form|%>
     <%= form.semantic_fields_for :general_answers do |answer| %>
         <%= answer.inputs :id, :hidden => 'true'%>
         <% @index = form_object_index(answer.object_name).to_s.to_i %>

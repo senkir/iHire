@@ -14,9 +14,10 @@ class GeneralAnswersController < ApplicationController
     end
   end
 
-  def results
-    @answers = GeneralAnswer.all
+  def show
+    @applicant = Person.find(params[:id])
     @questions = GeneralQuestion.all
+    @answers = @applicant.general_answers.all
   end
 
   def create
@@ -35,8 +36,27 @@ class GeneralAnswersController < ApplicationController
       end
     end
   end  
-end
+  
 
+  # PUT /people/1
+  # PUT /people/1.xml
+  def update
+    @applicant = Person.find(params[:id])
+
+    respond_to do |format|
+      if @applicant.update_attributes(params[:person])
+        flash[:notice] = 'person was successfully updated.'
+        format.html { redirect_to general_answer_path }
+        format.xml  { head :ok }
+      else
+        format.html { render :action => "index" }
+        format.xml  { render :xml => @general_answer.errors, :status => :unprocessable_entity }
+      end
+    end
+  end
+  
+  
+end
 =begin
   Saved in case i need it later:
 
