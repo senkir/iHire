@@ -1,14 +1,14 @@
 Hello Applicant! <br/>
 Please answer the following <%= @questions.count %> questions:<br/>
 
-  <% semantic_form_for :general_answers do |form| %>
-    <% @questions.each do |question| %>
-      <% @answer = GeneralAnswer.find_by_general_question_id_and_person_id( question.id, @applicant.id ) %>
-      <%= semantic_fields_for @answer do |answer|%>
-              <%= answer.input :answer, :label => question.question  %>
-      <% end %>
+  <% semantic_form_for @applicant, :html => { :controller => "general_answers", :class => "general_answer"} do |form|%>
+    <%= form.semantic_fields_for :general_answers do |answer| %>
+        <%= answer.inputs :id, :hidden => 'true'%>
+        <% @index = form_object_index(answer.object_name).to_s.to_i %>
+                <%= @questions[@index.to_i].question %><br/>
+    <%= answer.inputs :answer, :label => 'ham' %>
+    <%end%>
+    <%= form.buttons %>
     <% end %>
-    <%= form.commit_button :label => 'Save Answers' %>
-  <% end %>
 <br/><br />
 or just skip to the <%= link_to 'next.', job_applications_next_path(:applicant => @applicant.id) %> section.

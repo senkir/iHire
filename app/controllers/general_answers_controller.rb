@@ -20,7 +20,10 @@ class GeneralAnswersController < ApplicationController
   end
 
   def create
-    @answer = GeneralAnswer.find(params[:general_answer])
+    @answers = params[:general_answer]
+    @answers.each do |answer|
+      answer.save
+    end
     respond_to do |format|
       if @answer.save
         format.html { redirect_to(:action => "results", :id => @answer.id, :notice => 'General question was successfully created.') }
